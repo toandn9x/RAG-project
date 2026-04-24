@@ -7,13 +7,14 @@ Hệ thống Chatbot RAG (Retrieval-Augmented Generation) chuyên nghiệp, tố
 - **💬 Hội thoại có bộ nhớ**: Bot nhớ được ngữ cảnh cuộc trò chuyện (Chat Memory) thông qua SQLite.
 - **🛡️ Admin Premium**: Giao diện quản trị Dark Mode hiện đại, tích hợp ngay trên cổng 8000 với hệ thống đăng nhập bảo mật.
 - **🤖 Đa kênh**: Chat trực tiếp trên Web Hub hoặc thông qua Telegram Bot.
-- **📂 Quản lý dữ liệu**: Hỗ trợ PDF, TXT, MD. Tải lên và Re-index dữ liệu chỉ với 1 cú click.
+- **📂 Quản lý dữ liệu**: Hỗ trợ PDF, DOCX, XLSX, CSV, JPG, PNG, TXT, MD. Tải lên và Re-index dữ liệu chỉ với 1 cú click.
 - **⚡ Tối ưu Windows**: Không lỗi DLL, khởi động cực nhanh với Python 3.14.
 
 ## 🛠️ Yêu cầu hệ thống
 - Python 3.10 trở lên (Đã test tốt trên 3.14)
 - OpenRouter API Key (Dùng các model miễn phí)
 - Telegram Bot Token (Tạo từ @BotFather)
+- (Tùy chọn) Cài đặt Tesseract OCR nếu muốn đọc file ảnh tốt hơn.
 
 ## 📦 Cài đặt
 
@@ -25,7 +26,7 @@ Hệ thống Chatbot RAG (Retrieval-Augmented Generation) chuyên nghiệp, tố
 
 2. **Cài đặt thư viện:**
    ```bash
-   pip install fastapi uvicorn openai python-dotenv rank_bm25 pypdf aiogram python-multipart
+   pip install fastapi uvicorn openai python-dotenv rank_bm25 pypdf aiogram python-multipart docx2txt pandas openpyxl pytesseract Pillow
    ```
 
 3. **Cấu hình môi trường:**

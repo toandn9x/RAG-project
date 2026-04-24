@@ -3,6 +3,13 @@ import pickle
 import json
 from dotenv import load_dotenv
 from pypdf import PdfReader
+import docx2txt
+import pandas as pd
+try:
+    import pytesseract
+    from PIL import Image
+except ImportError:
+    pytesseract = None
 from rank_bm25 import BM25Okapi
 from openai import OpenAI
 from src.core.database import db
@@ -63,6 +70,22 @@ class RAGEngine:
                         reader = PdfReader(file_path)
                         for page in reader.pages:
                             text += page.extract_text() + "\n"
+                    elif file.endswith(".docx"):
+                        text = docx2txt.process(file_path)
+                    elif file.endswith((".png", ".jpg", ".jpeg")):
+                        if pytesseract:
+                            try:
+                                text = pytesseract.image_to_string(Image.open(file_path), lang='vie+eng')
+                            except Exception:
+                                text = f"[Loi OCR: Khong the doc file anh {file}]"
+                        else:
+                            text = "[Loi: Thu vien OCR chua duoc cai dat]"
+                    elif file.endswith((".xlsx", ".xls")):
+                        df = pd.read_excel(file_path)
+                        text = df.to_csv(index=False, sep='\t')
+                    elif file.endswith(".csv"):
+                        df = pd.read_csv(file_path)
+                        text = df.to_csv(index=False, sep='\t')
                     elif file.endswith((".txt", ".md")):
                         with open(file_path, "r", encoding="utf-8") as f:
                             text = f.read()

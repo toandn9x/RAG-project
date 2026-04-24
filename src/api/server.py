@@ -167,6 +167,7 @@ async def admin_page(request: Request, error: str = None):
                 <h3>📤 Tải lên tài liệu mới</h3>
                 <form action="/upload" method="post" enctype="multipart/form-data">
                     <input type="file" name="files" multiple style="margin-bottom: 20px; display: block;">
+                    <p style="color: #94a3b8; font-size: 0.9rem;">Hỗ trợ: PDF, DOCX, XLSX, CSV, JPG, PNG, TXT, MD</p>
                     <button type="submit" class="btn btn-primary">Tải lên ngay</button>
                 </form>
             </div>
