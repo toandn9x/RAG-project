@@ -13,3 +13,576 @@
 2026-04-24 20:05:13,676 - RAG-System - INFO - Received message from Toanfdn: hj
 2026-04-24 20:05:14,481 - RAG-System - INFO - Sent response to Toanfdn
 2026-04-24 20:05:14,481 - aiogram.event - INFO - Update id=260681510 is handled. Duration 805 ms by bot id=7753675859
+2026-04-24 20:19:27,398 - RAG-System - INFO - Telegram Bot is starting...
+2026-04-24 20:19:27,399 - aiogram.dispatcher - INFO - Start polling
+2026-04-24 20:19:28,052 - aiogram.dispatcher - INFO - Run polling for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-24 20:21:25,246 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-24 20:22:06,580 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-24 20:32:56,960 - aiogram.dispatcher - INFO - Polling stopped
+2026-04-24 20:32:56,993 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-04-24 20:32:56,996 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7753675859)
+2026-04-24 20:32:57,254 - aiogram.dispatcher - INFO - Polling stopped for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-24 20:33:09,929 - RAG-System - INFO - Telegram Bot is starting...
+2026-04-24 20:33:09,929 - aiogram.dispatcher - INFO - Start polling
+2026-04-24 20:33:10,574 - aiogram.dispatcher - INFO - Run polling for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-24 20:34:47,798 - aiogram.dispatcher - INFO - Polling stopped
+2026-04-24 20:34:47,801 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-04-24 20:34:47,802 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7753675859)
+2026-04-24 20:34:48,069 - aiogram.dispatcher - INFO - Polling stopped for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-24 20:34:57,925 - RAG-System - INFO - Telegram Bot is starting...
+2026-04-24 20:34:57,926 - aiogram.dispatcher - INFO - Start polling
+2026-04-24 20:34:59,910 - aiogram.dispatcher - INFO - Run polling for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-24 20:37:31,003 - RAG-System - INFO - Retrieved 5 chunks for query 'chào'. First 200 chars: ¤¤trên trời có 
+ </Một ông bố mù cho tiền con trai đi cắt tóc 
+Là thằng ham chơi ,nên thằng bé đã tiêu hếttiền 
+-thế mày đã cắt tóc chưa? 
+-Rồi ạ ! 
+-đưa tao xem nà0? 
+Bí quá thằng bé giơ mông ra Ông ...
+2026-04-24 20:37:42,098 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-24 20:40:30,823 - aiogram.dispatcher - INFO - Polling stopped
+2026-04-24 20:40:30,827 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-04-24 20:40:30,829 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7753675859)
+2026-04-24 20:40:31,025 - aiogram.dispatcher - INFO - Polling stopped for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-24 20:40:38,740 - RAG-System - INFO - Telegram Bot is starting...
+2026-04-24 20:40:38,741 - aiogram.dispatcher - INFO - Start polling
+2026-04-24 20:40:39,389 - aiogram.dispatcher - INFO - Run polling for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-24 20:40:46,083 - RAG-System - INFO - Retrieved 5 chunks for query 'cho tôi thông tin về nhân viên Híu'. First 200 chars: Thường xuyên đưa ra quyết định vô lý về vận hành và tuyển dụng						
+								Không có tư duy giáo dục nhưng vẫn muốn kinh doanh giáo dục (Sale bất chấp)						
+								Truyền thông nội bộ không tốt, gi...
+2026-04-24 20:40:52,313 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-24 20:40:59,300 - RAG-System - INFO - Received message from Toanfdn: cho tôi thông tin về nhân viên hiếu
+2026-04-24 20:41:15,158 - RAG-System - INFO - Retrieved 5 chunks for query 'cho tôi thông tin về nhân viên hiếu'. First 200 chars: #VALUE!	370	Lý Thị Minh Hiếu	Nhân viên hỗ trợ HDDT	Miền Bắc	Hỗ trợ	09/07/1996	Nữ	2022-03-07 00:00:00	2022-03-07 00:00:00	2022-05-07 00:00:00		Chính thức	0363442046	bebu09071996@gmail.com	live:.cid.c78...
+2026-04-24 20:41:25,739 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-24 20:41:46,522 - RAG-System - INFO - Retrieved 5 chunks for query 'cho tôi thông tin về nhân viên Hiếu'. First 200 chars: #VALUE!	370	Lý Thị Minh Hiếu	Nhân viên hỗ trợ HDDT	Miền Bắc	Hỗ trợ	09/07/1996	Nữ	2022-03-07 00:00:00	2022-03-07 00:00:00	2022-05-07 00:00:00		Chính thức	0363442046	bebu09071996@gmail.com	live:.cid.c78...
+2026-04-24 20:41:56,733 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-24 20:42:09,912 - aiogram.event - INFO - Update id=260681511 is not handled. Duration 70612 ms by bot id=7753675859
+2026-04-24 20:42:09,913 - aiogram.dispatcher - INFO - Polling stopped
+2026-04-24 20:42:09,916 - aiogram.dispatcher - INFO - Polling stopped for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-24 20:42:10,559 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-8' coro=<Dispatcher._process_update() done, defined at C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\aiogram\dispatcher\dispatcher.py:303> exception=KeyboardInterrupt()>
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\Admin\Desktop\New folder\src\bot\telegram_bot.py", line 50, in <module>
+    logger.error("Telegram Bot token is missing. Bot will not start.")
+    ^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\runners.py", line 204, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\runners.py", line 127, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\base_events.py", line 706, in run_until_complete
+    self.run_forever()
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\base_events.py", line 677, in run_forever
+    self._run_once()
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\base_events.py", line 2046, in _run_once
+    handle._run()
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\aiogram\dispatcher\router.py", line 163, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\aiogram\dispatcher\router.py", line 155, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\aiogram\dispatcher\router.py", line 183, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\New folder\src\bot\telegram_bot.py", line 35, in handle_message
+    await bot.send_chat_action(message.chat.id, "typing")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\New folder\src\core\rag_engine.py", line 203, in query
+    response = self.client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\openai\_utils\_utils.py", line 287, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1211, in create
+    return self._post(
+           ^^^^^^^^^^^
+    ...<49 lines>...
+    )
+    ^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\openai\_base_client.py", line 1314, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\openai\_base_client.py", line 1019, in request
+    response = self._send_request(
+               ^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\openai\_client.py", line 400, in _send_request
+    return self._send_with_auth_retry(request, stream=stream, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\openai\_client.py", line 378, in _send_with_auth_retry
+    response = super()._send_request(request, stream=stream, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\openai\_base_client.py", line 947, in _send_request
+    return self._client.send(request, stream=stream, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\httpx\_client.py", line 928, in send
+    raise exc
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\httpx\_client.py", line 922, in send
+    response.read()
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\httpx\_models.py", line 881, in read
+    self._content = b"".join(self.iter_bytes())
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\httpx\_models.py", line 897, in iter_bytes
+    for raw_bytes in self.iter_raw():
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\httpx\_models.py", line 951, in iter_raw
+    for raw_stream_bytes in self.stream:
+                            ^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\httpx\_client.py", line 153, in __iter__
+    for chunk in self._stream:
+                 ^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\httpx\_transports\default.py", line 127, in __iter__
+    for part in self._httpcore_stream:
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\httpcore\_sync\connection_pool.py", line 407, in __iter__
+    raise exc from None
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\httpcore\_sync\connection_pool.py", line 403, in __iter__
+    for part in self._stream:
+                ^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\httpcore\_sync\http11.py", line 342, in __iter__
+    raise exc
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\httpcore\_sync\http11.py", line 334, in __iter__
+    for chunk in self._connection._receive_response_body(**kwargs):
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\httpcore\_sync\http11.py", line 203, in _receive_response_body
+    event = self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\httpcore\_sync\http11.py", line 217, in _receive_event
+    data = self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.READ_NUM_BYTES, timeout=timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\httpcore\_backends\sync.py", line 128, in read
+    return self._sock.recv(max_bytes)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\ssl.py", line 1285, in recv
+    return self.read(buflen)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\ssl.py", line 1140, in read
+    return self._sslobj.read(len)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\runners.py", line 166, in _on_sigint
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+2026-04-24 20:42:18,527 - RAG-System - INFO - Telegram Bot is starting...
+2026-04-24 20:42:18,527 - aiogram.dispatcher - INFO - Start polling
+2026-04-24 20:42:19,167 - aiogram.dispatcher - INFO - Run polling for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-24 20:42:26,020 - RAG-System - INFO - Received message from Toanfdn: cho tôi thông tin về nhân viên hiếu
+2026-04-24 20:42:27,273 - RAG-System - INFO - Retrieved 5 chunks for query 'cho tôi thông tin về nhân viên hiếu'. First 200 chars: #VALUE!	370	Lý Thị Minh Hiếu	Nhân viên hỗ trợ HDDT	Miền Bắc	Hỗ trợ	09/07/1996	Nữ	2022-03-07 00:00:00	2022-03-07 00:00:00	2022-05-07 00:00:00		Chính thức	0363442046	bebu09071996@gmail.com	live:.cid.c78...
+2026-04-24 20:42:37,859 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-24 20:42:47,850 - asyncio - ERROR - Exception in callback BaseProactorEventLoop._start_serving.<locals>.loop() at C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\proactor_events.py:842
+handle: <Handle BaseProactorEventLoop._start_serving.<locals>.loop() at C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\proactor_events.py:842>
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\proactor_events.py", line 857, in loop
+    self._make_socket_transport(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        conn, protocol,
+        ^^^^^^^^^^^^^^^
+        extra={'peername': addr}, server=server)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\proactor_events.py", line 646, in _make_socket_transport
+    return _ProactorSocketTransport(self, sock, protocol, waiter,
+                                    extra, server)
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\proactor_events.py", line 612, in __init__
+    super().__init__(loop, sock, protocol, waiter, extra, server)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\proactor_events.py", line 189, in __init__
+    super().__init__(loop, sock, protocol, waiter, extra, server)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\proactor_events.py", line 335, in __init__
+    super().__init__(*args, **kw)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\proactor_events.py", line 66, in __init__
+    self._server._attach(self)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\base_events.py", line 297, in _attach
+    assert self._sockets is not None
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+2026-04-24 20:44:27,479 - aiogram.dispatcher - INFO - Polling stopped
+2026-04-24 20:44:27,483 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-04-24 20:44:27,487 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7753675859)
+2026-04-24 20:44:27,749 - aiogram.event - INFO - Update id=260681512 is not handled. Duration 121729 ms by bot id=7753675859
+2026-04-24 20:44:27,750 - aiogram.dispatcher - INFO - Polling stopped for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-24 20:44:50,598 - RAG-System - INFO - Telegram Bot is starting...
+2026-04-24 20:44:50,598 - aiogram.dispatcher - INFO - Start polling
+2026-04-24 20:44:51,238 - aiogram.dispatcher - INFO - Run polling for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-24 20:45:03,440 - RAG-System - INFO - Received message from Toanfdn: cho tôi thông tin về nhân viên hiếu
+2026-04-24 20:45:04,683 - RAG-System - INFO - Retrieved 5 chunks for query 'cho tôi thông tin về nhân viên hiếu'. First 200 chars: #VALUE!	370	Lý Thị Minh Hiếu	Nhân viên hỗ trợ HDDT	Miền Bắc	Hỗ trợ	09/07/1996	Nữ	2022-03-07 00:00:00	2022-03-07 00:00:00	2022-05-07 00:00:00		Chính thức	0363442046	bebu09071996@gmail.com	live:.cid.c78...
+2026-04-24 20:45:15,676 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-24 20:47:06,655 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-24 20:47:06,655 - aiogram.event - INFO - Update id=260681513 is handled. Duration 123215 ms by bot id=7753675859
+2026-04-24 20:49:28,880 - aiogram.dispatcher - INFO - Polling stopped
+2026-04-24 20:49:28,885 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-04-24 20:49:28,890 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7753675859)
+2026-04-24 20:49:29,149 - aiogram.dispatcher - INFO - Polling stopped for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-24 20:49:38,234 - RAG-System - INFO - Telegram Bot is starting...
+2026-04-24 20:49:38,234 - aiogram.dispatcher - INFO - Start polling
+2026-04-24 20:49:39,640 - aiogram.dispatcher - INFO - Run polling for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-24 20:49:44,051 - RAG-System - INFO - Received message from Toanfdn: cho tôi thông tin về nhân viên hiếu
+2026-04-24 20:49:48,795 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-24 20:49:48,825 - RAG-System - INFO - Retrieved 5 chunks for query 'cho tôi thông tin về nhân viên hiếu'. First 200 chars: #VALUE!	370	Lý Thị Minh Hiếu	Nhân viên hỗ trợ HDDT	Miền Bắc	Hỗ trợ	09/07/1996	Nữ	2022-03-07 00:00:00	2022-03-07 00:00:00	2022-05-07 00:00:00		Chính thức	0363442046	bebu09071996@gmail.com	live:.cid.c78...
+2026-04-24 20:49:48,825 - RAG-System - INFO - Calling OpenRouter API...
+2026-04-24 20:49:59,737 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-24 20:51:23,539 - RAG-System - INFO - Retrieved 5 chunks for query 'cho tôi thông tin về nhân viên hiếu'. First 200 chars: #VALUE!	370	Lý Thị Minh Hiếu	Nhân viên hỗ trợ HDDT	Miền Bắc	Hỗ trợ	09/07/1996	Nữ	2022-03-07 00:00:00	2022-03-07 00:00:00	2022-05-07 00:00:00		Chính thức	0363442046	bebu09071996@gmail.com	live:.cid.c78...
+2026-04-24 20:51:23,539 - RAG-System - INFO - Calling OpenRouter API...
+2026-04-24 20:51:34,582 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-24 20:51:50,025 - RAG-System - INFO - OpenRouter API returned successfully.
+2026-04-24 20:51:50,026 - RAG-System - ERROR - Error in OpenRouter or DB: 'NoneType' object is not subscriptable
+2026-04-24 20:51:50,026 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-24 20:51:50,027 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-24 20:51:50,415 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-24 20:51:50,415 - aiogram.event - INFO - Update id=260681514 is handled. Duration 126364 ms by bot id=7753675859
+2026-04-24 20:53:24,903 - RAG-System - INFO - OpenRouter API returned successfully.
+2026-04-24 20:53:24,904 - RAG-System - ERROR - Error in OpenRouter or DB: 'NoneType' object is not subscriptable
+2026-04-24 20:54:10,278 - RAG-System - INFO - Retrieved 5 chunks for query 'cho tôi thông tin về nhân viên hiếu'. First 200 chars: #VALUE!	370	Lý Thị Minh Hiếu	Nhân viên hỗ trợ HDDT	Miền Bắc	Hỗ trợ	09/07/1996	Nữ	2022-03-07 00:00:00	2022-03-07 00:00:00	2022-05-07 00:00:00		Chính thức	0363442046	bebu09071996@gmail.com	live:.cid.c78...
+2026-04-24 20:54:10,278 - RAG-System - INFO - Calling OpenRouter API...
+2026-04-24 20:54:20,788 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-24 20:56:11,104 - RAG-System - INFO - OpenRouter API returned successfully.
+2026-04-24 20:56:11,104 - RAG-System - ERROR - Error in OpenRouter or DB: 'NoneType' object is not subscriptable
+2026-04-24 20:56:56,568 - aiogram.dispatcher - INFO - Polling stopped
+2026-04-24 20:56:56,573 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-04-24 20:56:56,576 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7753675859)
+2026-04-24 20:56:56,831 - aiogram.dispatcher - INFO - Polling stopped for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-24 20:57:06,007 - RAG-System - INFO - Telegram Bot is starting...
+2026-04-24 20:57:06,007 - aiogram.dispatcher - INFO - Start polling
+2026-04-24 20:57:06,651 - aiogram.dispatcher - INFO - Run polling for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-24 20:57:10,636 - aiogram.dispatcher - INFO - Polling stopped
+2026-04-24 20:57:10,639 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-04-24 20:57:10,642 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7753675859)
+2026-04-24 20:57:10,833 - aiogram.dispatcher - INFO - Polling stopped for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-24 20:57:19,217 - RAG-System - INFO - Telegram Bot is starting...
+2026-04-24 20:57:19,218 - aiogram.dispatcher - INFO - Start polling
+2026-04-24 20:57:19,836 - aiogram.dispatcher - INFO - Run polling for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-24 20:59:35,135 - aiogram.dispatcher - INFO - Polling stopped
+2026-04-24 20:59:35,139 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-04-24 20:59:35,140 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7753675859)
+2026-04-24 20:59:35,370 - aiogram.dispatcher - INFO - Polling stopped for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-24 20:59:43,392 - RAG-System - INFO - Telegram Bot is starting...
+2026-04-24 20:59:43,392 - aiogram.dispatcher - INFO - Start polling
+2026-04-24 20:59:44,023 - aiogram.dispatcher - INFO - Run polling for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-24 21:00:08,390 - RAG-System - INFO - Retrieved 5 chunks for query 'hj'. First 200 chars: Girl: Dợ, hai ba bửa tém một bửa! (237817)….. 
+ 
+Boy: Ko ! chuyện tắm rửa của e thì a ko cần biết. SĐT 
+ 
+của e ák? 
+ 
+Boy: Dợ, nem séo bửa, ko tém, ko tém! (5670808) 
+ 
+Boy: Trời! 5, 6 ngày e ko tắm ...
+2026-04-24 21:00:08,391 - RAG-System - INFO - Calling OpenRouter API...
+2026-04-24 21:00:10,033 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-24 21:00:10,034 - openai._base_client - INFO - Retrying request to /chat/completions in 0.480304 seconds
+2026-04-24 21:00:11,365 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-24 21:00:11,366 - openai._base_client - INFO - Retrying request to /chat/completions in 0.898155 seconds
+2026-04-24 21:00:13,059 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-24 21:00:13,060 - RAG-System - ERROR - Error in OpenRouter or DB: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Venice', 'is_byok': False}}, 'user_id': 'user_3BWz30rbCohffj4HEGadhXNDExJ'}
+2026-04-24 21:00:56,147 - RAG-System - INFO - Retrieved 5 chunks for query 'hj'. First 200 chars: Girl: Dợ, hai ba bửa tém một bửa! (237817)….. 
+ 
+Boy: Ko ! chuyện tắm rửa của e thì a ko cần biết. SĐT 
+ 
+của e ák? 
+ 
+Boy: Dợ, nem séo bửa, ko tém, ko tém! (5670808) 
+ 
+Boy: Trời! 5, 6 ngày e ko tắm ...
+2026-04-24 21:00:56,148 - RAG-System - INFO - Calling OpenRouter API...
+2026-04-24 21:00:56,821 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-24 21:00:58,641 - RAG-System - INFO - OpenRouter API returned successfully.
+2026-04-24 21:00:58,641 - RAG-System - INFO - Saving history to database...
+2026-04-24 21:00:58,677 - RAG-System - INFO - Saved to database. Returning answer...
+2026-04-24 21:01:48,516 - RAG-System - INFO - Received message from Toanfdn: hj
+2026-04-24 21:01:49,724 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-24 21:01:49,731 - RAG-System - INFO - Retrieved 5 chunks for query 'hj'. First 200 chars: Girl: Dợ, hai ba bửa tém một bửa! (237817)….. 
+ 
+Boy: Ko ! chuyện tắm rửa của e thì a ko cần biết. SĐT 
+ 
+của e ák? 
+ 
+Boy: Dợ, nem séo bửa, ko tém, ko tém! (5670808) 
+ 
+Boy: Trời! 5, 6 ngày e ko tắm ...
+2026-04-24 21:01:49,731 - RAG-System - INFO - Calling OpenRouter API...
+2026-04-24 21:01:51,027 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-24 21:01:51,028 - openai._base_client - INFO - Retrying request to /chat/completions in 0.410438 seconds
+2026-04-24 21:01:52,096 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-24 21:01:52,096 - openai._base_client - INFO - Retrying request to /chat/completions in 0.819675 seconds
+2026-04-24 21:01:53,566 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-24 21:01:53,567 - RAG-System - ERROR - Error in OpenRouter or DB: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Venice', 'is_byok': False}}, 'user_id': 'user_3BWz30rbCohffj4HEGadhXNDExJ'}
+2026-04-24 21:01:53,568 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-24 21:01:53,568 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-24 21:01:53,977 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-24 21:01:53,977 - aiogram.event - INFO - Update id=260681515 is handled. Duration 5461 ms by bot id=7753675859
+2026-04-24 21:02:04,815 - RAG-System - INFO - Received message from Toanfdn: hj
+2026-04-24 21:02:05,667 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-24 21:02:05,675 - RAG-System - INFO - Retrieved 5 chunks for query 'hj'. First 200 chars: Girl: Dợ, hai ba bửa tém một bửa! (237817)….. 
+ 
+Boy: Ko ! chuyện tắm rửa của e thì a ko cần biết. SĐT 
+ 
+của e ák? 
+ 
+Boy: Dợ, nem séo bửa, ko tém, ko tém! (5670808) 
+ 
+Boy: Trời! 5, 6 ngày e ko tắm ...
+2026-04-24 21:02:05,675 - RAG-System - INFO - Calling OpenRouter API...
+2026-04-24 21:02:06,472 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-24 21:02:06,472 - openai._base_client - INFO - Retrying request to /chat/completions in 0.407192 seconds
+2026-04-24 21:02:07,566 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-24 21:02:07,568 - openai._base_client - INFO - Retrying request to /chat/completions in 0.837908 seconds
+2026-04-24 21:02:09,085 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-24 21:02:09,090 - RAG-System - ERROR - Error in OpenRouter or DB: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Venice', 'is_byok': False}}, 'user_id': 'user_3BWz30rbCohffj4HEGadhXNDExJ'}
+2026-04-24 21:02:09,091 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-24 21:02:09,092 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-24 21:02:09,759 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-24 21:02:09,761 - aiogram.event - INFO - Update id=260681516 is handled. Duration 4946 ms by bot id=7753675859
+2026-04-24 21:04:50,810 - RAG-System - INFO - Received message from Toanfdn: hj
+2026-04-24 21:04:51,612 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-24 21:04:51,632 - RAG-System - INFO - Retrieved 5 chunks for query 'hj'. First 200 chars: Girl: Dợ, hai ba bửa tém một bửa! (237817)….. 
+ 
+Boy: Ko ! chuyện tắm rửa của e thì a ko cần biết. SĐT 
+ 
+của e ák? 
+ 
+Boy: Dợ, nem séo bửa, ko tém, ko tém! (5670808) 
+ 
+Boy: Trời! 5, 6 ngày e ko tắm ...
+2026-04-24 21:04:51,632 - RAG-System - INFO - Calling OpenRouter API...
+2026-04-24 21:04:57,006 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-24 21:04:57,006 - openai._base_client - INFO - Retrying request to /chat/completions in 0.499196 seconds
+2026-04-24 21:05:02,266 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-24 21:05:02,266 - openai._base_client - INFO - Retrying request to /chat/completions in 0.831937 seconds
+2026-04-24 21:05:03,888 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-24 21:05:03,889 - RAG-System - ERROR - Error in OpenRouter or DB: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Venice', 'is_byok': False}}, 'user_id': 'user_3BWz30rbCohffj4HEGadhXNDExJ'}
+2026-04-24 21:05:03,889 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-24 21:05:03,890 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-24 21:05:04,283 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-24 21:05:04,284 - aiogram.event - INFO - Update id=260681517 is handled. Duration 13474 ms by bot id=7753675859
+2026-04-24 21:05:14,077 - RAG-System - INFO - Received message from Toanfdn: hj
+2026-04-24 21:05:14,865 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-24 21:05:14,870 - RAG-System - INFO - Retrieved 5 chunks for query 'hj'. First 200 chars: Girl: Dợ, hai ba bửa tém một bửa! (237817)….. 
+ 
+Boy: Ko ! chuyện tắm rửa của e thì a ko cần biết. SĐT 
+ 
+của e ák? 
+ 
+Boy: Dợ, nem séo bửa, ko tém, ko tém! (5670808) 
+ 
+Boy: Trời! 5, 6 ngày e ko tắm ...
+2026-04-24 21:05:14,870 - RAG-System - INFO - Calling OpenRouter API...
+2026-04-24 21:05:15,632 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-24 21:05:15,632 - openai._base_client - INFO - Retrying request to /chat/completions in 0.380197 seconds
+2026-04-24 21:05:16,668 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-24 21:05:16,669 - openai._base_client - INFO - Retrying request to /chat/completions in 0.998342 seconds
+2026-04-24 21:05:18,325 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-24 21:05:18,325 - RAG-System - ERROR - Error in OpenRouter or DB: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Venice', 'is_byok': False}}, 'user_id': 'user_3BWz30rbCohffj4HEGadhXNDExJ'}
+2026-04-24 21:05:18,327 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-24 21:05:18,327 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-24 21:05:18,727 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-24 21:05:18,728 - aiogram.event - INFO - Update id=260681518 is handled. Duration 4651 ms by bot id=7753675859
+2026-04-24 21:06:34,469 - RAG-System - INFO - Retrieved 5 chunks for query 'cho tôi thông tin về nhân viên hiếu'. First 200 chars: #VALUE!	370	Lý Thị Minh Hiếu	Nhân viên hỗ trợ HDDT	Miền Bắc	Hỗ trợ	09/07/1996	Nữ	2022-03-07 00:00:00	2022-03-07 00:00:00	2022-05-07 00:00:00		Chính thức	0363442046	bebu09071996@gmail.com	live:.cid.c78...
+2026-04-24 21:06:34,469 - RAG-System - INFO - Calling OpenRouter API...
+2026-04-24 21:06:35,506 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-24 21:06:40,014 - RAG-System - INFO - OpenRouter API returned successfully.
+2026-04-24 21:06:40,015 - RAG-System - INFO - Saving history to database...
+2026-04-24 21:06:40,047 - RAG-System - INFO - Saved to database. Returning answer...
+2026-04-24 21:07:41,844 - RAG-System - INFO - Retrieved 5 chunks for query 'nguyễn văn hiếu'. First 200 chars: 11	Nguyễn Kim Chi	Hỗ trợ phần mềm kế toán	Trịnh Thị Linh		2021-05-02 00:00:00	2021-07-02 00:00:00	02/03/2021	2021-05-02 00:00:00																																																			
+12	Nguyễn Văn Hiếu	L...
+2026-04-24 21:07:41,844 - RAG-System - INFO - Calling OpenRouter API...
+2026-04-24 21:07:42,796 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-24 21:07:45,901 - RAG-System - INFO - OpenRouter API returned successfully.
+2026-04-24 21:07:45,902 - RAG-System - INFO - Saving history to database...
+2026-04-24 21:07:45,933 - RAG-System - INFO - Saved to database. Returning answer...
+2026-04-24 21:10:32,352 - aiogram.dispatcher - INFO - Polling stopped
+2026-04-24 21:10:32,358 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-04-24 21:13:46,796 - RAG-System - INFO - Telegram Bot is starting...
+2026-04-24 21:13:46,796 - aiogram.dispatcher - INFO - Start polling
+2026-04-24 21:13:47,428 - aiogram.dispatcher - INFO - Run polling for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-24 21:13:47,641 - RAG-System - INFO - Received message from Toanfdn: hj
+2026-04-24 21:13:48,887 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-24 21:13:48,894 - RAG-System - INFO - Retrieved 5 chunks for query 'hj'. First 200 chars: Girl: Dợ, hai ba bửa tém một bửa! (237817)….. 
+ 
+Boy: Ko ! chuyện tắm rửa của e thì a ko cần biết. SĐT 
+ 
+của e ák? 
+ 
+Boy: Dợ, nem séo bửa, ko tém, ko tém! (5670808) 
+ 
+Boy: Trời! 5, 6 ngày e ko tắm ...
+2026-04-24 21:13:48,894 - RAG-System - INFO - Calling OpenRouter API...
+2026-04-24 21:13:50,404 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-24 21:13:51,286 - RAG-System - INFO - OpenRouter API returned successfully.
+2026-04-24 21:13:51,287 - RAG-System - INFO - Saving history to database...
+2026-04-24 21:13:51,322 - RAG-System - INFO - Saved to database. Returning answer...
+2026-04-24 21:13:51,323 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-24 21:13:51,324 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-24 21:13:51,730 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-24 21:13:51,731 - aiogram.event - INFO - Update id=260681519 is handled. Duration 4090 ms by bot id=7753675859
+2026-04-24 21:14:21,246 - RAG-System - INFO - Received message from Toanfdn: cho tôi thông tin về Linh
+2026-04-24 21:14:22,018 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-24 21:14:22,048 - RAG-System - INFO - Retrieved 5 chunks for query 'cho tôi thông tin về Linh'. First 200 chars: Nhìn a e tưởng con trâu đang cười 
+————————– 
+Đây là bồ mới của em , 
+còn đây là chồng của em . Hai anh làm quen với nhau đi , 
+em đi gọi xe cứu thương… 
+————————– 
+~~~~ Các bạn đang đọc me hài ola tạ...
+2026-04-24 21:14:22,048 - RAG-System - INFO - Calling OpenRouter API...
+2026-04-24 21:14:23,036 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-24 21:14:24,479 - RAG-System - INFO - OpenRouter API returned successfully.
+2026-04-24 21:14:24,480 - RAG-System - INFO - Saving history to database...
+2026-04-24 21:14:24,511 - RAG-System - INFO - Saved to database. Returning answer...
+2026-04-24 21:14:24,513 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-24 21:14:24,515 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-24 21:14:24,897 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-24 21:14:24,897 - aiogram.event - INFO - Update id=260681520 is handled. Duration 3650 ms by bot id=7753675859
+2026-04-24 21:14:43,052 - RAG-System - INFO - Received message from Toanfdn: cho tôi thông tin về nhân viên Hiếu
+2026-04-24 21:14:43,843 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-24 21:14:43,888 - RAG-System - INFO - Retrieved 5 chunks for query 'cho tôi thông tin về nhân viên Hiếu'. First 200 chars: #VALUE!	370	Lý Thị Minh Hiếu	Nhân viên hỗ trợ HDDT	Miền Bắc	Hỗ trợ	09/07/1996	Nữ	2022-03-07 00:00:00	2022-03-07 00:00:00	2022-05-07 00:00:00		Chính thức	0363442046	bebu09071996@gmail.com	live:.cid.c78...
+2026-04-24 21:14:43,889 - RAG-System - INFO - Calling OpenRouter API...
+2026-04-24 21:14:44,581 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-24 21:14:51,381 - RAG-System - INFO - OpenRouter API returned successfully.
+2026-04-24 21:14:51,381 - RAG-System - INFO - Saving history to database...
+2026-04-24 21:14:51,411 - RAG-System - INFO - Saved to database. Returning answer...
+2026-04-24 21:14:51,412 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-24 21:14:51,412 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-24 21:14:51,837 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-24 21:14:51,838 - aiogram.event - INFO - Update id=260681521 is handled. Duration 8786 ms by bot id=7753675859
+2026-04-24 21:16:22,597 - RAG-System - INFO - Received message from Toanfdn: Cho tôi thông tin về nhân viên Cường
+2026-04-24 21:16:23,407 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-24 21:16:23,439 - RAG-System - INFO - Retrieved 5 chunks for query 'Cho tôi thông tin về nhân viên Cường'. First 200 chars: 3		Đỗ Bùi Thành Nam	Lập trình viên	Miền Bắc	Lập trình PMKT	09/10/2000	Nam	14/04/2021				CTV	0961032539	donam2539@gmail.com	live:donam2539	036200000160	29/06/2015	Nam Định	Xuân Trung, Xuân Trường, Nam ...
+2026-04-24 21:16:23,439 - RAG-System - INFO - Calling OpenRouter API...
+2026-04-24 21:16:24,493 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-24 21:16:35,001 - RAG-System - INFO - OpenRouter API returned successfully.
+2026-04-24 21:16:35,001 - RAG-System - INFO - Saving history to database...
+2026-04-24 21:16:35,032 - RAG-System - INFO - Saved to database. Returning answer...
+2026-04-24 21:16:35,032 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-24 21:16:35,032 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-24 21:16:35,479 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-24 21:16:35,479 - aiogram.event - INFO - Update id=260681522 is handled. Duration 12882 ms by bot id=7753675859
+2026-04-24 21:17:35,789 - RAG-System - INFO - Received message from Toanfdn: Kể chuyện hài ola
+2026-04-24 21:17:36,567 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-24 21:17:36,587 - RAG-System - INFO - Retrieved 5 chunks for query 'Kể chuyện hài ola'. First 200 chars: Một thah niên phàn nàn rằq :\"sao troq tô phở cuả tôi lại coá ba con ruồi thế này ?\" 
+ 
+. 
+ 
+. 
+ 
+. 
+ 
+. 
+ 
+. 
+ 
+Chủ qán bảO rằq :\"Cuộc tìh tai Ba luôn coá kết thúc thê thảm thế đoá\" 
+ 
+-----------...
+2026-04-24 21:17:36,587 - RAG-System - INFO - Calling OpenRouter API...
+2026-04-24 21:17:37,582 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-24 21:17:41,013 - RAG-System - INFO - OpenRouter API returned successfully.
+2026-04-24 21:17:41,014 - RAG-System - INFO - Saving history to database...
+2026-04-24 21:17:41,045 - RAG-System - INFO - Saved to database. Returning answer...
+2026-04-24 21:17:41,046 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-24 21:17:41,046 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-24 21:17:41,460 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-24 21:17:41,461 - aiogram.event - INFO - Update id=260681523 is handled. Duration 5671 ms by bot id=7753675859
+2026-04-24 21:19:04,425 - RAG-System - INFO - Received message from Toanfdn: Công ty fpt
+2026-04-24 21:19:05,195 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-24 21:19:05,208 - RAG-System - INFO - Retrieved 5 chunks for query 'Công ty fpt'. First 200 chars: 154.0		149.0	Bắc	FPT Software		Chạy ngay đi		Sếp toxic, thử việc xong không đóng bảo hiểm thi thoảng thanh toán chậm lương nhân viên						
+				CÔNG TY CỔ PHẦN PHẦN MỀM FPT										
+155.0		150.0	Nam	F...
+2026-04-24 21:19:05,208 - RAG-System - INFO - Calling OpenRouter API...
+2026-04-24 21:19:06,348 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-24 21:19:10,869 - RAG-System - INFO - OpenRouter API returned successfully.
+2026-04-24 21:19:10,870 - RAG-System - INFO - Saving history to database...
+2026-04-24 21:19:10,901 - RAG-System - INFO - Saved to database. Returning answer...
+2026-04-24 21:19:10,902 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-24 21:19:10,902 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-24 21:19:11,302 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-24 21:19:11,303 - aiogram.event - INFO - Update id=260681524 is handled. Duration 6878 ms by bot id=7753675859
+2026-04-24 21:43:07,820 - RAG-System - INFO - Received message from Toanfdn: Cho mình thông tin về bạn Ly
+2026-04-24 21:43:08,587 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-24 21:43:08,610 - RAG-System - INFO - Retrieved 5 chunks for query 'Cho mình thông tin về bạn Ly'. First 200 chars: lắm. Nó cũng có 2 tai, 2 mắt, 1 mũi, 1 miệng như người vậy. hihi. Trông nó rất baby. Bây giờ nó đang… 
+. 
+. 
+.Nó đang 
+. 
+.hỳhỳ… 
+Nó đang đọc Me của mh đấy 
+——————— 
+Chàng trai nọ đến nhà vợ sắp cưới,...
+2026-04-24 21:43:08,611 - RAG-System - INFO - Calling OpenRouter API...
+2026-04-24 21:43:09,590 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-24 21:43:14,810 - RAG-System - INFO - OpenRouter API returned successfully.
+2026-04-24 21:43:14,811 - RAG-System - INFO - Saving history to database...
+2026-04-24 21:43:14,842 - RAG-System - INFO - Saved to database. Returning answer...
+2026-04-24 21:43:14,843 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-24 21:43:14,843 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-24 21:43:16,312 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-24 21:43:16,312 - aiogram.event - INFO - Update id=260681525 is handled. Duration 8492 ms by bot id=7753675859
+2026-04-24 21:57:41,971 - aiogram.dispatcher - INFO - Polling stopped
+2026-04-24 21:57:41,972 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-04-24 21:57:41,973 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7753675859)
+2026-04-24 21:57:42,228 - aiogram.dispatcher - INFO - Polling stopped for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-24 21:58:18,612 - RAG-System - INFO - Telegram Bot is starting...
+2026-04-24 21:58:18,612 - aiogram.dispatcher - INFO - Start polling
+2026-04-24 21:58:19,237 - aiogram.dispatcher - INFO - Run polling for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-24 21:59:25,050 - RAG-System - INFO - No relevant chunks found for query: string
+2026-04-24 22:06:07,732 - aiogram.dispatcher - INFO - Polling stopped
+2026-04-24 22:06:07,735 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-04-24 22:06:07,735 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7753675859)
+2026-04-24 22:06:07,990 - aiogram.dispatcher - INFO - Polling stopped for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-24 22:06:18,915 - RAG-System - INFO - Telegram Bot is starting...
+2026-04-24 22:06:18,916 - aiogram.dispatcher - INFO - Start polling
+2026-04-24 22:06:19,569 - aiogram.dispatcher - INFO - Run polling for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'

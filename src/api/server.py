@@ -2,6 +2,7 @@ from fastapi import FastAPI, HTTPException, Request, Form, UploadFile, File, Res
 from fastapi.responses import HTMLResponse, RedirectResponse
 from pydantic import BaseModel
 from src.core.rag_engine import rag_engine
+from src.api.admin_ui import get_admin_layout
 import uvicorn
 import os
 import shutil
@@ -123,174 +124,79 @@ async def root():
     </html>
     """
 
-@app.get("/admin", response_class=HTMLResponse)
-async def admin_page(request: Request, error: str = None):
-    if not is_authenticated(request):
-        error_html = '<p style="color: #ef4444; background: rgba(239, 68, 68, 0.1); padding: 10px; border-radius: 8px; margin-bottom: 20px;">❌ Sai tài khoản hoặc mật khẩu!</p>' if error else ''
-        return f"""
-        <!DOCTYPE html>
-        <html>
-        <head>
-            <title>Login - Admin vPro</title>
-            <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
-            <style>
-                body {{ font-family: 'Outfit', sans-serif; background: #0f172a; display: flex; align-items: center; justify-content: center; height: 100vh; margin:0; }}
-                .login-card {{ background: #1e293b; padding: 40px; border-radius: 20px; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.5); width: 350px; text-align: center; border: 1px solid #334155; }}
-                h2 {{ color: white; margin-bottom: 30px; }}
-                input {{ width: 100%; padding: 12px; margin-bottom: 20px; border-radius: 8px; border: 1px solid #334155; background: #0f172a; color: white; box-sizing: border-box; outline: none; }}
-                input:focus {{ border-color: #6366f1; }}
-                button {{ width: 100%; padding: 12px; background: #6366f1; border: none; color: white; font-weight: 600; border-radius: 8px; cursor: pointer; transition: 0.3s; }}
-                button:hover {{ background: #4f46e5; }}
-            </style>
-        </head>
-        <body>
-            <div class="login-card">
-                <h2>🔒 Admin Login</h2>
-                {error_html}
-                <form action="/login" method="post">
-                    <input type="text" name="username" placeholder="Username" required>
-                    <input type="password" name="password" placeholder="Password" required>
-                    <button type="submit">Đăng nhập</button>
-                </form>
-            </div>
-        </body>
-        </html>
-        """
-    # ... rest of the admin page logic (already handled)
 
-    data_dir = os.getenv("DATA_DIR", "./data")
-    files = os.listdir(data_dir) if os.path.exists(data_dir) else []
-    files_html = "".join([f"<li><span>📄 {f}</span><a href='/delete-file?name={f}' style='color:#ef4444; font-weight:600; text-decoration:none;'>Xóa</a></li>" for f in files])
-
-    return f"""
+@app.get("/admin/login", response_class=HTMLResponse)
+async def admin_login_page(request: Request, error: str = None):
+    error_html = '<p style="color: #ef4444; background: rgba(239, 68, 68, 0.1); padding: 10px; border-radius: 8px; margin-bottom: 20px;">❌ Sai tài khoản hoặc mật khẩu!</p>' if error else ''
+    return f'''
     <!DOCTYPE html>
     <html>
     <head>
-        <title>Admin Panel - RAG vPro</title>
+        <title>Login - Admin vPro</title>
         <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
         <style>
-            body {{ font-family: 'Outfit', sans-serif; background: #0f172a; color: #f8fafc; margin: 0; display: flex; }}
-            .sidebar {{ width: 280px; background: #1e293b; height: 100vh; padding: 30px; box-sizing: border-box; border-right: 1px solid #334155; }}
-            .content {{ flex: 1; padding: 40px; overflow-y: auto; }}
-            .card {{ background: #1e293b; padding: 30px; border-radius: 16px; border: 1px solid #334155; margin-bottom: 30px; }}
-            h1, h3 {{ margin-top: 0; }}
-            .btn {{ padding: 12px 24px; border-radius: 8px; border: none; cursor: pointer; font-weight: 600; text-decoration: none; transition: 0.3s; }}
-            .btn-primary {{ background: #6366f1; color: white; }}
-            .btn-danger {{ background: #ef4444; color: white; }}
-            .btn-success {{ background: #10b981; color: white; width: 100%; font-size: 1.1rem; }}
-            ul {{ list-style: none; padding: 0; }}
-            li {{ padding: 15px; background: #0f172a; border-radius: 10px; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; }}
-            .logout {{ margin-top: 50px; display: block; color: #94a3b8; text-decoration: none; }}
-            
-            /* Drag & Drop Upload Styles */
-            .upload-container {{ position: relative; }}
-            .drop-zone {{
-                border: 2px dashed #334155;
-                border-radius: 16px;
-                padding: 40px 20px;
-                text-align: center;
-                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-                background: rgba(15, 23, 42, 0.3);
-                cursor: pointer;
-                margin-bottom: 20px;
-            }}
-            .drop-zone:hover, .drop-zone.drag-over {{
-                border-color: #6366f1;
-                background: rgba(99, 102, 241, 0.08);
-                transform: translateY(-2px);
-            }}
-            .drop-zone .icon {{ font-size: 3rem; display: block; margin-bottom: 15px; }}
-            .drop-zone p {{ margin: 0; color: #94a3b8; }}
-            .drop-zone b {{ color: #6366f1; }}
-            .file-preview {{
-                margin-top: 20px;
-                display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-                gap: 10px;
-                max-height: 200px;
-                overflow-y: auto;
-            }}
-            .file-chip {{
-                background: #0f172a;
-                padding: 8px 12px;
-                border-radius: 8px;
-                font-size: 0.8rem;
-                display: flex;
-                align-items: center;
-                gap: 8px;
-                border: 1px solid #334155;
-            }}
-            .file-chip span {{ overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }}
+            body {{ font-family: 'Outfit', sans-serif; background: #0f172a; display: flex; align-items: center; justify-content: center; height: 100vh; margin:0; }}
+            .login-card {{ background: #1e293b; padding: 40px; border-radius: 20px; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.5); width: 350px; text-align: center; border: 1px solid #334155; }}
+            h2 {{ color: white; margin-bottom: 30px; }}
+            input {{ width: 100%; padding: 12px; margin-bottom: 20px; border-radius: 8px; border: 1px solid #334155; background: #0f172a; color: white; box-sizing: border-box; outline: none; }}
+            input:focus {{ border-color: #6366f1; }}
+            button {{ width: 100%; padding: 12px; background: #6366f1; border: none; color: white; font-weight: 600; border-radius: 8px; cursor: pointer; transition: 0.3s; }}
+            button:hover {{ background: #4f46e5; }}
         </style>
     </head>
     <body>
-        <div class="sidebar">
-            <h2 style="color: #6366f1">vPro Admin</h2>
-            <nav>
-                <a href="/" style="display:block; color: white; margin-bottom: 20px; text-decoration: none;">🏠 Quay lại Chat</a>
-                <a href="/admin" style="display:block; color: #6366f1; margin-bottom: 20px; text-decoration: none; font-weight: 600;">📁 Quản lý File</a>
-                <a href="#logs-section" style="display:block; color: white; margin-bottom: 20px; text-decoration: none;">📜 Nhật ký (Logs)</a>
-                <a href="/docs" style="display:block; color: white; margin-bottom: 20px; text-decoration: none;">📄 API Docs</a>
-            </nav>
-            <a href="/logout" class="logout">🚪 Đăng xuất</a>
+        <div class="login-card">
+            <h2>🔒 Admin Login</h2>
+            {error_html}
+            <form action="/login" method="post">
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Đăng nhập</button>
+            </form>
         </div>
-        <div class="content">
-            <h1>⚙️ Hệ thống Quản trị vPro</h1>
-            
-            <div class="card">
-                <h3>📤 Tải lên tài liệu mới</h3>
-                <form id="upload-form" action="/upload" method="post" enctype="multipart/form-data">
-                    <div class="upload-container">
-                        <div id="drop-zone" class="drop-zone">
-                            <span class="icon">✨</span>
-                            <p>Kéo thả file vào đây hoặc <b>click để chọn</b></p>
-                            <input type="file" name="files" id="file-input" multiple hidden>
-                        </div>
-                        <div id="file-preview" class="file-preview"></div>
+    </body>
+    </html>
+    '''
+
+@app.get("/admin", response_class=HTMLResponse)
+async def admin_files(request: Request):
+    if not is_authenticated(request): return RedirectResponse(url="/admin/login", status_code=303)
+    
+    data_dir = os.getenv("DATA_DIR", "./data")
+    files = os.listdir(data_dir) if os.path.exists(data_dir) else []
+    files_html = "".join([f"<li><span>📄 {f}</span><a href='/delete-file?name={f}' class='btn btn-danger'>Xóa</a></li>" for f in files])
+    
+    content = f'''
+        <div class="card">
+            <h3>📤 Tải lên tài liệu mới</h3>
+            <form id="upload-form" action="/upload" method="post" enctype="multipart/form-data">
+                <div class="upload-container">
+                    <div id="drop-zone" class="drop-zone">
+                        <span class="icon">✨</span>
+                        <p>Kéo thả file vào đây hoặc <b style="color:var(--primary)">click để chọn</b></p>
+                        <input type="file" name="files" id="file-input" multiple hidden>
                     </div>
-                    <p style="color: #94a3b8; font-size: 0.85rem; margin: 15px 0;">Hỗ trợ: PDF, DOCX, XLSX, CSV, Ảnh, TXT, MD</p>
-                    <button type="submit" id="upload-btn" class="btn btn-primary" style="width: 100%; display: none;">Tải lên ngay</button>
-                </form>
-            </div>
-
-            <div class="card">
-                <h3>📚 Thư viện tài liệu ({len(files)})</h3>
-                <ul>{files_html or "<li>Chưa có tài liệu nào.</li>"}</ul>
-            </div>
-            
-            <div class="card" style="border-color: #8b5cf6;">
-                <h3>🤖 Cấu hình Model AI</h3>
-                <p style="color: #94a3b8; font-size: 0.9rem;">Nhập tên Model trên OpenRouter (VD: google/gemma-2-9b-it:free, anthropic/claude-3-haiku, ...)</p>
-                <form action="/update-model" method="post" style="display: flex; gap: 10px;">
-                    <input type="text" name="model_name" value="{rag_engine.model_name}" style="flex: 1; padding: 12px; border-radius: 8px; border: 1px solid #334155; background: #0f172a; color: white; outline: none;" required>
-                    <button type="submit" class="btn btn-primary" style="background: #8b5cf6; border-color: #8b5cf6; white-space: nowrap;">Lưu Model</button>
-                </form>
-            </div>
-
-            <div class="card" style="border-color: #10b981;">
-                <h3>🧠 Cập nhật kiến thức</h3>
-                <p style="color: #94a3b8;">Nhấn nút dưới đây để bot học lại toàn bộ dữ liệu mới nhất.</p>
-                <form action="/reindex" method="post">
-                    <button type="submit" class="btn btn-success">🔄 Bắt đầu Re-index dữ liệu</button>
-                </form>
-            </div>
-            <div class="card" id="logs-section">
-                <h3>📜 Nhật ký hệ thống (Logs)</h3>
-                <div id="log-content" style="background: #0f172a; color: #10b981; padding: 15px; border-radius: 10px; height: 300px; overflow-y: auto; font-family: monospace; font-size: 0.85rem; border: 1px solid #334155;">
-                    Đang tải nhật ký...
+                    <div id="file-preview" class="file-preview"></div>
                 </div>
-                <button onclick="fetchLogs()" class="btn btn-primary" style="margin-top:10px; width:100%">Làm mới Log</button>
-            </div>
+                <p style="color: #94a3b8; font-size: 0.85rem; margin: 15px 0;">Hỗ trợ: PDF, DOCX, XLSX, CSV, Ảnh, TXT, MD</p>
+                <button type="submit" id="upload-btn" class="btn btn-primary" style="width: 100%; display: none;">Tải lên ngay</button>
+            </form>
+        </div>
 
-            <script>
-            async function fetchLogs() {{
-                const response = await fetch('/api/logs');
-                const text = await response.text();
-                const logDiv = document.getElementById('log-content');
-                logDiv.innerText = text;
-                logDiv.scrollTop = logDiv.scrollHeight;
-            }}
-            
+        <div class="card">
+            <h3>📚 Thư viện tài liệu ({len(files)})</h3>
+            <ul class="file-list">{files_html or "<li>Chưa có tài liệu nào.</li>"}</ul>
+        </div>
+        
+        <div class="card" style="border-color: #10b981;">
+            <h3>🧠 Cập nhật kiến thức</h3>
+            <p style="color: #94a3b8; font-size: 0.95rem; margin-bottom: 20px;">Nhấn nút dưới đây để bot học lại toàn bộ dữ liệu mới nhất.</p>
+            <form action="/reindex" method="post">
+                <button type="submit" class="btn btn-success" style="width:100%">🔄 Bắt đầu Re-index dữ liệu</button>
+            </form>
+        </div>
+        
+        <script>
             // Drag and Drop Logic
             const dropZone = document.getElementById('drop-zone');
             const fileInput = document.getElementById('file-input');
@@ -315,35 +221,72 @@ async def admin_page(request: Request, error: str = None):
                 dropZone.classList.remove('drag-over');
                 if (e.dataTransfer.files.length) {{
                     fileInput.files = e.dataTransfer.files;
-                    updateFilePreview();
+                    updatePreview();
                 }}
             }});
 
-            fileInput.addEventListener('change', updateFilePreview);
+            fileInput.addEventListener('change', updatePreview);
 
-            function updateFilePreview() {{
+            function updatePreview() {{
                 filePreview.innerHTML = '';
-                const files = fileInput.files;
-                if (files.length > 0) {{
-                    uploadBtn.style.display = 'block';
-                    Array.from(files).forEach(file => {{
+                if (fileInput.files.length > 0) {{
+                    Array.from(fileInput.files).forEach(file => {{
                         const chip = document.createElement('div');
                         chip.className = 'file-chip';
                         chip.innerHTML = `<span>📄 ${{file.name}}</span>`;
                         filePreview.appendChild(chip);
                     }});
+                    uploadBtn.style.display = 'flex';
                 }} else {{
                     uploadBtn.style.display = 'none';
                 }}
             }}
-
-            fetchLogs();
-            setInterval(fetchLogs, 5000); // Tự động cập nhật mỗi 5 giây
         </script>
+    '''
+    return get_admin_layout("Quản lý File & Dữ liệu", content, "files")
+
+@app.get("/admin/config", response_class=HTMLResponse)
+async def admin_config(request: Request):
+    if not is_authenticated(request): return RedirectResponse(url="/admin/login", status_code=303)
+    
+    content = f'''
+    <div class="card" style="border-color: #8b5cf6;">
+        <h3>🤖 Cấu hình Model AI</h3>
+        <p style="color: #94a3b8; font-size: 0.95rem; margin-bottom: 20px; line-height: 1.5;">Nhập tên Model trên OpenRouter (VD: google/gemma-2-9b-it:free, anthropic/claude-3-haiku, ...). Việc cập nhật sẽ được áp dụng ngay lập tức mà không cần khởi động lại.</p>
+        <form action="/update-model" method="post" style="display: flex; gap: 15px;">
+            <input type="text" class="form-control" name="model_name" value="{rag_engine.model_name}" required>
+            <button type="submit" class="btn btn-primary" style="background: #8b5cf6; border-color: #8b5cf6; white-space: nowrap;">💾 Lưu Model</button>
+        </form>
+    </div>
+    '''
+    return get_admin_layout("Cấu hình Model AI", content, "config")
+
+@app.get("/admin/logs", response_class=HTMLResponse)
+async def admin_logs(request: Request):
+    if not is_authenticated(request): return RedirectResponse(url="/admin/login", status_code=303)
+    
+    content = '''
+    <div class="card" id="logs-section">
+        <h3>📜 Nhật ký hệ thống (Live Logs)</h3>
+        <div id="log-content" style="background: #0f172a; color: #10b981; padding: 20px; border-radius: 12px; height: 500px; overflow-y: auto; font-family: monospace; font-size: 0.9rem; border: 1px solid #334155; line-height: 1.5;">
+            Đang tải nhật ký...
         </div>
-    </body>
-    </html>
-    """
+        <button onclick="fetchLogs()" class="btn btn-primary" style="margin-top:20px; width:100%">🔄 Làm mới Log</button>
+    </div>
+    <script>
+        async function fetchLogs() {
+            const response = await fetch('/api/logs');
+            const text = await response.text();
+            const logDiv = document.getElementById('log-content');
+            logDiv.innerText = text;
+            logDiv.scrollTop = logDiv.scrollHeight;
+        }
+        fetchLogs();
+        setInterval(fetchLogs, 5000); // Tự động cập nhật mỗi 5 giây
+    </script>
+    '''
+    return get_admin_layout("Nhật ký hệ thống", content, "logs")
+
 
 # --- API ACTIONS ---
 
@@ -363,11 +306,11 @@ async def login(username: str = Form(...), password: str = Form(...)):
         response = RedirectResponse(url="/admin", status_code=303)
         response.set_cookie(key="admin_session", value="authenticated")
         return response
-    return RedirectResponse(url="/admin?error=1", status_code=303)
+    return RedirectResponse(url="/admin/login?error=1", status_code=303)
 
 @app.get("/logout")
 async def logout():
-    response = RedirectResponse(url="/admin", status_code=303)
+    response = RedirectResponse(url="/admin/login", status_code=303)
     response.delete_cookie("admin_session")
     return response
 
@@ -404,7 +347,7 @@ async def reindex(request: Request):
 
 @app.post("/update-model")
 async def update_model(request: Request, model_name: str = Form(...)):
-    if not is_authenticated(request): return RedirectResponse(url="/admin", status_code=303)
+    if not is_authenticated(request): return RedirectResponse(url="/admin/login", status_code=303)
     
     rag_engine.model_name = model_name
     
@@ -427,7 +370,7 @@ async def update_model(request: Request, model_name: str = Form(...)):
     except Exception as e:
         print(f"Could not update .env: {e}")
         
-    return RedirectResponse(url="/admin", status_code=303)
+    return RedirectResponse(url="/admin/config", status_code=303)
 
 @app.post("/chat", response_model=ChatResponse)
 async def chat(request: ChatRequest):
@@ -438,4 +381,5 @@ async def chat(request: ChatRequest):
         raise HTTPException(status_code=500, detail=str(e))
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    port = int(os.getenv("PORT", 8000))
+    uvicorn.run(app, host="0.0.0.0", port=port)
