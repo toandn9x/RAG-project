@@ -50,6 +50,11 @@ async def root():
             @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
             .user { align-self: flex-end; background: var(--primary); color: white; margin-left: auto; border-bottom-right-radius: 2px; }
             .bot { align-self: flex-start; background: #334155; border-bottom-left-radius: 2px; }
+            .typing-indicator { display: flex; gap: 5px; align-items: center; justify-content: center; height: 15px; }
+            .typing-indicator span { width: 8px; height: 8px; background-color: var(--text-muted); border-radius: 50%; animation: typing 1.4s infinite ease-in-out both; }
+            .typing-indicator span:nth-child(1) { animation-delay: -0.32s; }
+            .typing-indicator span:nth-child(2) { animation-delay: -0.16s; }
+            @keyframes typing { 0%, 80%, 100% { transform: scale(0); } 40% { transform: scale(1); } }
         </style>
     </head>
     <body>
@@ -69,19 +74,47 @@ async def root():
         <script>
             async function sendMessage() {
                 const input = document.getElementById('user-input');
+                const btn = document.querySelector('.input-area button');
                 const chatWindow = document.getElementById('chat-window');
                 const message = input.value.trim();
+                
                 if (!message) return;
-                chatWindow.innerHTML += `<div class="msg user">${message}</div>`;
+                
+                chatWindow.insertAdjacentHTML('beforeend', `<div class="msg user">${message}</div>`);
                 input.value = '';
+                
+                input.disabled = true;
+                btn.disabled = true;
+                
+                const loadingId = 'loading-' + Date.now();
+                chatWindow.insertAdjacentHTML('beforeend', `
+                    <div id="${loadingId}" class="msg bot" style="padding: 12px 20px; width: fit-content; min-width: 60px;">
+                        <div class="typing-indicator"><span></span><span></span><span></span></div>
+                    </div>`);
+                
                 chatWindow.scrollTop = chatWindow.scrollHeight;
-                const response = await fetch('/chat', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ message: message })
-                });
-                const data = await response.json();
-                chatWindow.innerHTML += `<div class="msg bot">${data.answer}</div>`;
+                
+                try {
+                    const response = await fetch('/chat', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ message: message })
+                    });
+                    const data = await response.json();
+                    
+                    const loadingElement = document.getElementById(loadingId);
+                    if (loadingElement) loadingElement.remove();
+                    
+                    chatWindow.insertAdjacentHTML('beforeend', `<div class="msg bot">${data.answer}</div>`);
+                } catch (error) {
+                    const loadingElement = document.getElementById(loadingId);
+                    if (loadingElement) loadingElement.remove();
+                    chatWindow.insertAdjacentHTML('beforeend', `<div class="msg bot" style="color:#ef4444;">Lỗi kết nối tới server.</div>`);
+                }
+                
+                input.disabled = false;
+                btn.disabled = false;
+                input.focus();
                 chatWindow.scrollTop = chatWindow.scrollHeight;
             }
             document.getElementById('user-input').addEventListener('keypress', (e) => { if (e.key === 'Enter') sendMessage(); });
@@ -148,6 +181,46 @@ async def admin_page(request: Request, error: str = None):
             ul {{ list-style: none; padding: 0; }}
             li {{ padding: 15px; background: #0f172a; border-radius: 10px; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; }}
             .logout {{ margin-top: 50px; display: block; color: #94a3b8; text-decoration: none; }}
+            
+            /* Drag & Drop Upload Styles */
+            .upload-container {{ position: relative; }}
+            .drop-zone {{
+                border: 2px dashed #334155;
+                border-radius: 16px;
+                padding: 40px 20px;
+                text-align: center;
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                background: rgba(15, 23, 42, 0.3);
+                cursor: pointer;
+                margin-bottom: 20px;
+            }}
+            .drop-zone:hover, .drop-zone.drag-over {{
+                border-color: #6366f1;
+                background: rgba(99, 102, 241, 0.08);
+                transform: translateY(-2px);
+            }}
+            .drop-zone .icon {{ font-size: 3rem; display: block; margin-bottom: 15px; }}
+            .drop-zone p {{ margin: 0; color: #94a3b8; }}
+            .drop-zone b {{ color: #6366f1; }}
+            .file-preview {{
+                margin-top: 20px;
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 10px;
+                max-height: 200px;
+                overflow-y: auto;
+            }}
+            .file-chip {{
+                background: #0f172a;
+                padding: 8px 12px;
+                border-radius: 8px;
+                font-size: 0.8rem;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                border: 1px solid #334155;
+            }}
+            .file-chip span {{ overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }}
         </style>
     </head>
     <body>
@@ -166,16 +239,32 @@ async def admin_page(request: Request, error: str = None):
             
             <div class="card">
                 <h3>📤 Tải lên tài liệu mới</h3>
-                <form action="/upload" method="post" enctype="multipart/form-data">
-                    <input type="file" name="files" multiple style="margin-bottom: 20px; display: block;">
-                    <p style="color: #94a3b8; font-size: 0.9rem;">Hỗ trợ: PDF, DOCX, XLSX, CSV, JPG, PNG, TXT, MD</p>
-                    <button type="submit" class="btn btn-primary">Tải lên ngay</button>
+                <form id="upload-form" action="/upload" method="post" enctype="multipart/form-data">
+                    <div class="upload-container">
+                        <div id="drop-zone" class="drop-zone">
+                            <span class="icon">✨</span>
+                            <p>Kéo thả file vào đây hoặc <b>click để chọn</b></p>
+                            <input type="file" name="files" id="file-input" multiple hidden>
+                        </div>
+                        <div id="file-preview" class="file-preview"></div>
+                    </div>
+                    <p style="color: #94a3b8; font-size: 0.85rem; margin: 15px 0;">Hỗ trợ: PDF, DOCX, XLSX, CSV, Ảnh, TXT, MD</p>
+                    <button type="submit" id="upload-btn" class="btn btn-primary" style="width: 100%; display: none;">Tải lên ngay</button>
                 </form>
             </div>
 
             <div class="card">
                 <h3>📚 Thư viện tài liệu ({len(files)})</h3>
                 <ul>{files_html or "<li>Chưa có tài liệu nào.</li>"}</ul>
+            </div>
+            
+            <div class="card" style="border-color: #8b5cf6;">
+                <h3>🤖 Cấu hình Model AI</h3>
+                <p style="color: #94a3b8; font-size: 0.9rem;">Nhập tên Model trên OpenRouter (VD: google/gemma-2-9b-it:free, anthropic/claude-3-haiku, ...)</p>
+                <form action="/update-model" method="post" style="display: flex; gap: 10px;">
+                    <input type="text" name="model_name" value="{rag_engine.model_name}" style="flex: 1; padding: 12px; border-radius: 8px; border: 1px solid #334155; background: #0f172a; color: white; outline: none;" required>
+                    <button type="submit" class="btn btn-primary" style="background: #8b5cf6; border-color: #8b5cf6; white-space: nowrap;">Lưu Model</button>
+                </form>
             </div>
 
             <div class="card" style="border-color: #10b981;">
@@ -194,16 +283,63 @@ async def admin_page(request: Request, error: str = None):
             </div>
 
             <script>
-                async function fetchLogs() {{
-                    const response = await fetch('/api/logs');
-                    const text = await response.text();
-                    const logDiv = document.getElementById('log-content');
-                    logDiv.innerText = text;
-                    logDiv.scrollTop = logDiv.scrollHeight;
+            async function fetchLogs() {{
+                const response = await fetch('/api/logs');
+                const text = await response.text();
+                const logDiv = document.getElementById('log-content');
+                logDiv.innerText = text;
+                logDiv.scrollTop = logDiv.scrollHeight;
+            }}
+            
+            // Drag and Drop Logic
+            const dropZone = document.getElementById('drop-zone');
+            const fileInput = document.getElementById('file-input');
+            const filePreview = document.getElementById('file-preview');
+            const uploadBtn = document.getElementById('upload-btn');
+
+            dropZone.addEventListener('click', () => fileInput.click());
+
+            dropZone.addEventListener('dragover', (e) => {{
+                e.preventDefault();
+                dropZone.classList.add('drag-over');
+            }});
+
+            ['dragleave', 'dragend'].forEach(type => {{
+                dropZone.addEventListener(type, () => {{
+                    dropZone.classList.remove('drag-over');
+                }});
+            }});
+
+            dropZone.addEventListener('drop', (e) => {{
+                e.preventDefault();
+                dropZone.classList.remove('drag-over');
+                if (e.dataTransfer.files.length) {{
+                    fileInput.files = e.dataTransfer.files;
+                    updateFilePreview();
                 }}
-                fetchLogs();
-                setInterval(fetchLogs, 5000); // Tự động cập nhật mỗi 5 giây
-            </script>
+            }});
+
+            fileInput.addEventListener('change', updateFilePreview);
+
+            function updateFilePreview() {{
+                filePreview.innerHTML = '';
+                const files = fileInput.files;
+                if (files.length > 0) {{
+                    uploadBtn.style.display = 'block';
+                    Array.from(files).forEach(file => {{
+                        const chip = document.createElement('div');
+                        chip.className = 'file-chip';
+                        chip.innerHTML = `<span>📄 ${{file.name}}</span>`;
+                        filePreview.appendChild(chip);
+                    }});
+                }} else {{
+                    uploadBtn.style.display = 'none';
+                }}
+            }}
+
+            fetchLogs();
+            setInterval(fetchLogs, 5000); // Tự động cập nhật mỗi 5 giây
+        </script>
         </div>
     </body>
     </html>
@@ -264,6 +400,33 @@ async def delete_file(request: Request, name: str):
 async def reindex(request: Request):
     if not is_authenticated(request): return RedirectResponse(url="/admin", status_code=303)
     rag_engine.ingest_data()
+    return RedirectResponse(url="/admin", status_code=303)
+
+@app.post("/update-model")
+async def update_model(request: Request, model_name: str = Form(...)):
+    if not is_authenticated(request): return RedirectResponse(url="/admin", status_code=303)
+    
+    rag_engine.model_name = model_name
+    
+    try:
+        if os.path.exists(".env"):
+            with open(".env", "r") as f:
+                lines = f.readlines()
+            
+            with open(".env", "w") as f:
+                model_updated = False
+                for line in lines:
+                    if line.startswith("DEFAULT_MODEL="):
+                        f.write(f"DEFAULT_MODEL={model_name}\n")
+                        model_updated = True
+                    else:
+                        f.write(line)
+                
+                if not model_updated:
+                    f.write(f"\nDEFAULT_MODEL={model_name}\n")
+    except Exception as e:
+        print(f"Could not update .env: {e}")
+        
     return RedirectResponse(url="/admin", status_code=303)
 
 @app.post("/chat", response_model=ChatResponse)

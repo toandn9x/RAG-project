@@ -153,6 +153,13 @@ class RAGEngine:
 
     def query(self, user_input, session_id="default"):
         """Retrieve relevant chunks and get answer from OpenRouter with Chat Memory."""
+        
+        # Đồng bộ hóa model name giữa các process (Web và Telegram)
+        from dotenv import load_dotenv
+        import os
+        load_dotenv(override=True)
+        self.model_name = os.getenv("DEFAULT_MODEL", "google/gemma-2-9b-it:free")
+        
         if not self.bm25 or not self.chunks:
             return "He thong du lieu chua duoc khoi tao. Vui long tai tai lieu len trang Admin va nhan Re-index."
             
@@ -164,38 +171,68 @@ class RAGEngine:
 
         # 2. Search for relevant chunks
         tokenized_query = user_input.lower().split()
-        top_chunks = self.bm25.get_top_n(tokenized_query, self.chunks, n=3)
+        
+        # Check if we have any matches at all
+        scores = self.bm25.get_scores(tokenized_query)
+        if max(scores) == 0:
+            logger.info(f"No relevant chunks found for query: {user_input}")
+            return "Thông tin này không có trong tài liệu của hệ thống (Không tìm thấy từ khóa liên quan)."
+
+        top_chunks = self.bm25.get_top_n(tokenized_query, self.chunks, n=5)
         
         context = "\n---\n".join(top_chunks)
         
+        # Log retrieved context for debugging
+        logger.info(f"Retrieved {len(top_chunks)} chunks for query '{user_input}'. First 200 chars: {context[:200]}...")
+        
         # 3. Call OpenRouter
-        prompt = f"""Su dung thong tin va lich su tro chuyen sau day de tra loi cau hoi. 
-Neu khong co trong thong tin, hay tra loi bang kien thuc cua ban nhung co chu thich la 'Ngoai tai lieu'.
-Tra loi bang tieng Viet.
+        system_prompt = """Bạn là một trợ lý AI thông minh. Nhiệm vụ của bạn là trả lời câu hỏi dựa TRÊN DUY NHẤT thông tin (Context) được cung cấp dưới đây.
+        
+HƯỚNG DẪN QUAN TRỌNG:
+1. Chỉ trả lời dựa trên Context được cung cấp. Không sử dụng kiến thức bên ngoài nếu không có trong Context.
+2. Nếu thông tin không có trong Context, hãy trả lời chính xác là: "Thông tin này không có trong tài liệu của hệ thống."
+3. Không tự ý bịa đặt thông tin.
+4. Trả lời bằng tiếng Việt, phong cách chuyên nghiệp."""
 
-Context:
+        user_content = f"""Dưới đây là Context (thông tin từ tài liệu):
 {context}
 
-Lich su tro chuyen:
+---
+Lịch sử trò chuyện:
 {history_str}
 
-Question: {user_input}
+---
+Câu hỏi của người dùng: {user_input}
 
-Answer:"""
+Hãy trả lời dựa trên Context trên."""
 
         try:
+            logger.info("Calling OpenRouter API...")
             response = self.client.chat.completions.create(
                 model=self.model_name,
-                messages=[{"role": "user", "content": prompt}]
+                messages=[
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": user_content}
+                ]
             )
+            logger.info("OpenRouter API returned successfully.")
+            
+            # Safely check if response contains choices
+            if not response or not getattr(response, 'choices', None) or len(response.choices) == 0:
+                logger.error(f"Invalid or empty response from OpenRouter: {response}")
+                return "❌ Server AI đang bị quá tải hoặc phản hồi lỗi. Vui lòng thử lại sau ít phút!"
+                
             answer = response.choices[0].message.content
             
             # 4. Save to Database
+            logger.info("Saving history to database...")
             db.add_message(session_id, "User", user_input)
             db.add_message(session_id, "Assistant", answer)
+            logger.info("Saved to database. Returning answer...")
             
             return answer
         except Exception as e:
+            logger.error(f"Error in OpenRouter or DB: {str(e)}")
             return f"Loi khi goi AI: {str(e)}"
 
 # Singleton instance

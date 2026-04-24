@@ -3,18 +3,25 @@
 Hệ thống Chatbot RAG (Retrieval-Augmented Generation) chuyên nghiệp, tối ưu hóa cho Windows, tích hợp đa kênh (Web Hub & Telegram) với giao diện quản trị Admin Premium.
 
 ## ✨ Tính năng nổi bật
-- **🧠 Bộ não vPro**: Sử dụng engine BM25 siêu nhẹ, tìm kiếm tài liệu chính xác mà không cần GPU hay thư viện nặng.
-- **💬 Hội thoại có bộ nhớ**: Bot nhớ được ngữ cảnh cuộc trò chuyện (Chat Memory) thông qua SQLite.
-- **🛡️ Admin Premium**: Giao diện quản trị Dark Mode hiện đại, tích hợp ngay trên cổng 8000 với hệ thống đăng nhập bảo mật.
+- **🧠 Bộ não vPro (Strict RAG)**: Sử dụng engine BM25 siêu nhẹ, tìm kiếm tài liệu chính xác. AI được cấu hình nghiêm ngặt: **Chỉ trả lời dựa trên tài liệu, tuyệt đối không bịa đặt thông tin**. Nếu không có trong tài liệu, bot sẽ báo không biết.
+- **💬 Hội thoại có bộ nhớ**: Bot nhớ được ngữ cảnh cuộc trò chuyện (Chat Memory) thông qua hệ thống cơ sở dữ liệu nội bộ.
+- **🛡️ Admin Premium xịn xò**: 
+  - Giao diện quản trị Dark Mode hiện đại.
+  - Hỗ trợ **Kéo & Thả (Drag & Drop)** tải lên file với tính năng File Preview chuyên nghiệp.
+  - Tích hợp xem trực tiếp hệ thống Logs (nhật ký) theo thời gian thực để dễ dàng debug.
 - **🤖 Đa kênh**: Chat trực tiếp trên Web Hub hoặc thông qua Telegram Bot.
-- **📂 Quản lý dữ liệu**: Hỗ trợ PDF, DOCX, XLSX, CSV, JPG, PNG, TXT, MD. Tải lên và Re-index dữ liệu chỉ với 1 cú click.
-- **⚡ Tối ưu Windows**: Không lỗi DLL, khởi động cực nhanh với Python 3.14.
+- **📂 Đa dạng Dữ liệu**: Hỗ trợ PDF, DOCX, XLSX, CSV, JPG, PNG, TXT, MD. Tải lên và Re-index dữ liệu chỉ với 1 cú click.
+
+## 🔒 Vấn đề Bảo mật Dữ liệu
+- **Dữ liệu được lưu ở đâu?** Toàn bộ file gốc của bạn (Excel, PDF...) và database tìm kiếm (BM25 Index) được lưu **hoàn toàn cục bộ trên máy tính/máy chủ của bạn**.
+- **Dữ liệu gửi đi API (OpenRouter)**: Khi chat, hệ thống chỉ trích xuất **một vài đoạn văn bản nhỏ** có liên quan nhất đến câu hỏi để gửi sang API nhằm mục đích tạo câu trả lời mạch lạc. Hệ thống **KHÔNG** upload toàn bộ file của bạn lên mạng.
+- *Lưu ý:* Để bảo mật 100% đối với các dữ liệu tuyệt mật, bạn có thể dễ dàng đổi cấu hình `base_url` để kết nối với các Local LLM (như Ollama) thay vì dùng OpenRouter.
 
 ## 🛠️ Yêu cầu hệ thống
 - Python 3.10 trở lên (Đã test tốt trên 3.14)
-- OpenRouter API Key (Dùng các model miễn phí)
+- OpenRouter API Key (Khuyên dùng `google/gemma-2-9b-it:free` hoặc `anthropic/claude-3-haiku`)
 - Telegram Bot Token (Tạo từ @BotFather)
-- (Tùy chọn) Cài đặt Tesseract OCR nếu muốn đọc file ảnh tốt hơn.
+- (Tùy chọn) Cài đặt Tesseract OCR nếu muốn AI đọc văn bản trong file ảnh (JPG/PNG).
 
 ## 📦 Cài đặt
 
@@ -46,10 +53,10 @@ python run.py
 - **API Documentation (Swagger):** `http://localhost:8000/docs`
 
 ## 📘 Hướng dẫn sử dụng
-1. Truy cập trang **Admin**, đăng nhập bằng tài khoản trong `.env`.
-2. Tải tài liệu của bạn lên thư mục dữ liệu.
-3. Nhấn **"🔄 Bắt đầu Re-index dữ liệu"** để bot học kiến thức mới.
-4. Bắt đầu chat trên Web hoặc Telegram!
+1. Truy cập trang **Admin**, đăng nhập bằng tài khoản được cấu hình trong `.env`.
+2. Trải nghiệm giao diện **Kéo & Thả** để tải tài liệu của bạn lên hệ thống.
+3. Nhấn **"🔄 Bắt đầu Re-index dữ liệu"** để bot học và lập chỉ mục kiến thức mới.
+4. Bắt đầu chat trên Web hoặc Telegram và trải nghiệm bot RAG trả lời chính xác dựa trên tài liệu!
 
 ---
 Thiết kế bởi **Antigravity AI** với tình yêu dành cho cộng đồng vPro.
