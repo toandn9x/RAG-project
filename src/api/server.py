@@ -156,6 +156,7 @@ async def admin_page(request: Request, error: str = None):
             <nav>
                 <a href="/" style="display:block; color: white; margin-bottom: 20px; text-decoration: none;">🏠 Quay lại Chat</a>
                 <a href="/admin" style="display:block; color: #6366f1; margin-bottom: 20px; text-decoration: none; font-weight: 600;">📁 Quản lý File</a>
+                <a href="#logs-section" style="display:block; color: white; margin-bottom: 20px; text-decoration: none;">📜 Nhật ký (Logs)</a>
                 <a href="/docs" style="display:block; color: white; margin-bottom: 20px; text-decoration: none;">📄 API Docs</a>
             </nav>
             <a href="/logout" class="logout">🚪 Đăng xuất</a>
@@ -184,12 +185,41 @@ async def admin_page(request: Request, error: str = None):
                     <button type="submit" class="btn btn-success">🔄 Bắt đầu Re-index dữ liệu</button>
                 </form>
             </div>
+            <div class="card" id="logs-section">
+                <h3>📜 Nhật ký hệ thống (Logs)</h3>
+                <div id="log-content" style="background: #0f172a; color: #10b981; padding: 15px; border-radius: 10px; height: 300px; overflow-y: auto; font-family: monospace; font-size: 0.85rem; border: 1px solid #334155;">
+                    Đang tải nhật ký...
+                </div>
+                <button onclick="fetchLogs()" class="btn btn-primary" style="margin-top:10px; width:100%">Làm mới Log</button>
+            </div>
+
+            <script>
+                async function fetchLogs() {{
+                    const response = await fetch('/api/logs');
+                    const text = await response.text();
+                    const logDiv = document.getElementById('log-content');
+                    logDiv.innerText = text;
+                    logDiv.scrollTop = logDiv.scrollHeight;
+                }}
+                fetchLogs();
+                setInterval(fetchLogs, 5000); // Tự động cập nhật mỗi 5 giây
+            </script>
         </div>
     </body>
     </html>
     """
 
 # --- API ACTIONS ---
+
+@app.get("/api/logs")
+async def get_logs(request: Request):
+    if not is_authenticated(request): return Response("Unauthorized", status_code=401)
+    if os.path.exists("app.log"):
+        with open("app.log", "r", encoding="utf-8") as f:
+            # Lấy 100 dòng cuối cùng
+            lines = f.readlines()
+            return "".join(lines[-100:])
+    return "Chưa có dữ liệu nhật ký."
 
 @app.post("/login")
 async def login(username: str = Form(...), password: str = Form(...)):
@@ -209,11 +239,18 @@ async def logout():
 async def upload_files(request: Request, files: list[UploadFile] = File(...)):
     if not is_authenticated(request): return RedirectResponse(url="/admin", status_code=303)
     data_dir = os.getenv("DATA_DIR", "./data")
-    os.makedirs(data_dir, exist_ok=True)
-    for file in files:
-        with open(os.path.join(data_dir, file.filename), "wb") as buffer:
-            shutil.copyfileobj(file.file, buffer)
-    return RedirectResponse(url="/admin", status_code=303)
+    try:
+        os.makedirs(data_dir, exist_ok=True)
+        for file in files:
+            if not file.filename:
+                continue
+            file_path = os.path.join(data_dir, file.filename)
+            with open(file_path, "wb") as buffer:
+                shutil.copyfileobj(file.file, buffer)
+        return RedirectResponse(url="/admin", status_code=303)
+    except Exception as e:
+        logger.error(f"Upload error: {str(e)}")
+        return HTMLResponse(f"<h2>Loi khi upload: {str(e)}</h2><a href='/admin'>Quay lai</a>")
 
 @app.get("/delete-file")
 async def delete_file(request: Request, name: str):

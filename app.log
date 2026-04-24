@@ -1,0 +1,15 @@
+2026-04-24 20:02:03,948 - RAG-System - INFO - Telegram Bot is starting...
+2026-04-24 20:02:03,948 - aiogram.dispatcher - INFO - Start polling
+2026-04-24 20:02:04,583 - aiogram.dispatcher - INFO - Run polling for bot @qltc_toandn_bot id=7753675859 - 'Quan Ly Tai Chinh'
+2026-04-24 20:02:25,545 - RAG-System - INFO - Telegram Bot is starting...
+2026-04-24 20:02:25,555 - aiogram.dispatcher - INFO - Start polling
+2026-04-24 20:02:26,322 - aiogram.dispatcher - INFO - Run polling for bot @qltc_toandn_bot id=7753675859 - 'Quan Ly Tai Chinh'
+2026-04-24 20:03:45,162 - RAG-System - INFO - Telegram Bot is starting...
+2026-04-24 20:03:45,163 - aiogram.dispatcher - INFO - Start polling
+2026-04-24 20:03:46,563 - aiogram.dispatcher - INFO - Run polling for bot @qltc_toandn_bot id=7753675859 - 'Quan Ly Tai Chinh'
+2026-04-24 20:03:57,925 - RAG-System - INFO - Received message from Toanfdn: hj
+2026-04-24 20:03:59,815 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-24 20:03:59,815 - aiogram.event - INFO - Update id=260681509 is handled. Duration 1890 ms by bot id=7753675859
+2026-04-24 20:05:13,676 - RAG-System - INFO - Received message from Toanfdn: hj
+2026-04-24 20:05:14,481 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-24 20:05:14,481 - aiogram.event - INFO - Update id=260681510 is handled. Duration 805 ms by bot id=7753675859

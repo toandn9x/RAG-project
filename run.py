@@ -29,6 +29,5 @@ if __name__ == "__main__":
     except KeyboardInterrupt:
         print("\n🛑 Đang dừng hệ thống...")
         api_proc.terminate()
-        admin_proc.terminate()
         bot_proc.terminate()
         print("Đã dừng.")
