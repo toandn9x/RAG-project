@@ -49,6 +49,11 @@ def get_admin_layout(title: str, content: str, active_menu: str = "files"):
             .btn-danger {{ background: #ef4444; color: white; padding: 6px 12px; font-size: 0.85rem; border-radius: 6px; }}
             .btn-danger:hover {{ background: #dc2626; }}
             
+            /* Inputs */
+            input.form-control, textarea.form-control {{ width: 100%; padding: 12px 15px; border-radius: 10px; border: 1px solid #334155; background: #0f172a; color: white; outline: none; font-family: 'Outfit', sans-serif; transition: 0.3s; box-sizing: border-box; }}
+            input.form-control:focus, textarea.form-control:focus {{ border-color: var(--primary); box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2); }}
+            textarea.form-control {{ resize: vertical; min-height: 100px; }}
+            
             /* File List */
             .file-list {{ list-style: none; padding: 0; margin: 0; }}
             .file-list li {{ display: flex; justify-content: space-between; align-items: center; padding: 15px; background: rgba(15, 23, 42, 0.4); border-radius: 10px; margin-bottom: 10px; border: 1px solid #334155; transition: 0.2s; }}

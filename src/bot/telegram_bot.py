@@ -42,7 +42,11 @@ async def handle_message(message: types.Message):
         
         # 3. Edit the pending message with the final answer
         logger.info("Editing pending message on Telegram...")
-        await pending_msg.edit_text(answer)
+        try:
+            await pending_msg.edit_text(answer, parse_mode="Markdown")
+        except Exception:
+            # Fallback if markdown is invalid
+            await pending_msg.edit_text(answer)
         logger.info(f"Sent response to {message.from_user.username}")
     except Exception as e:
         logger.error(f"Error handling message: {str(e)}")

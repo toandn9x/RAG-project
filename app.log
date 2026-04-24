@@ -586,3 +586,86 @@ Chàng trai nọ đến nhà vợ sắp cưới,...
 2026-04-24 22:06:18,915 - RAG-System - INFO - Telegram Bot is starting...
 2026-04-24 22:06:18,916 - aiogram.dispatcher - INFO - Start polling
 2026-04-24 22:06:19,569 - aiogram.dispatcher - INFO - Run polling for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-24 22:12:05,204 - aiogram.dispatcher - INFO - Polling stopped
+2026-04-24 22:12:05,205 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-04-24 22:12:05,206 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7753675859)
+2026-04-24 22:12:05,466 - aiogram.dispatcher - INFO - Polling stopped for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-24 22:13:05,575 - RAG-System - INFO - Loading existing index...
+2026-04-24 22:13:08,524 - RAG-System - INFO - Loading existing index...
+2026-04-24 22:13:09,148 - RAG-System - INFO - Telegram Bot is starting...
+2026-04-24 22:13:09,149 - aiogram.dispatcher - INFO - Start polling
+2026-04-24 22:13:09,790 - aiogram.dispatcher - INFO - Run polling for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-24 22:14:27,188 - aiogram.dispatcher - INFO - Polling stopped
+2026-04-24 22:14:27,189 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-04-24 22:14:27,189 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7753675859)
+2026-04-24 22:14:27,454 - aiogram.dispatcher - INFO - Polling stopped for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-24 22:14:33,544 - RAG-System - INFO - Loading existing index...
+2026-04-24 22:14:36,027 - RAG-System - INFO - Loading existing index...
+2026-04-24 22:14:36,862 - RAG-System - INFO - Telegram Bot is starting...
+2026-04-24 22:14:36,864 - aiogram.dispatcher - INFO - Start polling
+2026-04-24 22:14:37,499 - aiogram.dispatcher - INFO - Run polling for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-24 22:16:57,886 - RAG-System - INFO - Received message from Toanfdn: nguyễn văn hiếu
+2026-04-24 22:16:59,102 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-24 22:16:59,114 - RAG-System - ERROR - Error handling message: string indices must be integers, not 'str'
+2026-04-24 22:16:59,545 - aiogram.event - INFO - Update id=260681526 is handled. Duration 1659 ms by bot id=7753675859
+2026-04-24 22:18:03,261 - aiogram.dispatcher - INFO - Polling stopped
+2026-04-24 22:18:03,262 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-04-24 22:18:03,263 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7753675859)
+2026-04-24 22:18:03,515 - aiogram.dispatcher - INFO - Polling stopped for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-24 22:18:11,896 - RAG-System - INFO - Loading existing index...
+2026-04-24 22:18:12,463 - RAG-System - INFO - Telegram Bot is starting...
+2026-04-24 22:18:12,463 - aiogram.dispatcher - INFO - Start polling
+2026-04-24 22:18:13,082 - aiogram.dispatcher - INFO - Run polling for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-24 22:19:14,772 - aiogram.dispatcher - INFO - Polling stopped
+2026-04-24 22:19:14,773 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-04-24 22:19:14,774 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7753675859)
+2026-04-24 22:19:15,004 - aiogram.dispatcher - INFO - Polling stopped for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-24 22:19:19,498 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-24 22:19:20,026 - RAG-System - INFO - Loading existing index...
+2026-04-24 22:19:21,753 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-24 22:19:22,345 - RAG-System - INFO - Loading existing index...
+2026-04-24 22:19:22,486 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-24 22:19:22,933 - RAG-System - INFO - Telegram Bot is starting...
+2026-04-24 22:19:22,934 - aiogram.dispatcher - INFO - Start polling
+2026-04-24 22:19:26,573 - aiogram.dispatcher - INFO - Run polling for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-24 22:19:39,082 - RAG-System - INFO - Ingesting data from ./data...
+2026-04-24 22:21:10,637 - RAG-System - INFO - Received message from Toanfdn: thông tin về bạn Hà
+2026-04-24 22:21:11,866 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-24 22:21:11,869 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-24 22:21:11,885 - RAG-System - INFO - Local retrieval successful. Sources: {'Tài liệu cũ (Vui lòng Re-index)'}
+2026-04-24 22:21:13,976 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-24 22:21:16,693 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-24 22:21:16,695 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-24 22:21:17,134 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-24 22:21:17,146 - aiogram.event - INFO - Update id=260681527 is handled. Duration 6509 ms by bot id=7753675859
+2026-04-24 22:21:36,595 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-24 22:21:36,614 - RAG-System - INFO - Local retrieval successful. Sources: {'ola.pdf', 'THÔNG TIN NHÂN SỰ - SDS (1).xlsx'}
+2026-04-24 22:21:37,945 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-24 22:22:06,301 - aiogram.dispatcher - INFO - Polling stopped
+2026-04-24 22:22:06,302 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-04-24 22:22:06,302 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7753675859)
+2026-04-24 22:22:06,555 - aiogram.dispatcher - INFO - Polling stopped for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-24 22:22:11,902 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-24 22:22:12,521 - RAG-System - INFO - Loading existing index...
+2026-04-24 22:22:14,613 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-24 22:22:15,166 - RAG-System - INFO - Loading existing index...
+2026-04-24 22:22:15,350 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-24 22:22:15,930 - RAG-System - INFO - Telegram Bot is starting...
+2026-04-24 22:22:15,930 - aiogram.dispatcher - INFO - Start polling
+2026-04-24 22:22:16,564 - aiogram.dispatcher - INFO - Run polling for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-24 22:22:18,511 - RAG-System - INFO - Received message from Toanfdn: thông tin về nhân viên cường
+2026-04-24 22:22:19,726 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-24 22:22:19,728 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-24 22:22:19,744 - RAG-System - INFO - Local retrieval successful. Sources: {'THÔNG TIN NHÂN SỰ - SDS (1).xlsx'}
+2026-04-24 22:22:20,928 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-24 22:22:30,599 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-24 22:22:30,599 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-24 22:22:31,020 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-24 22:22:31,021 - aiogram.event - INFO - Update id=260681528 is handled. Duration 12509 ms by bot id=7753675859
+2026-04-24 22:22:46,459 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-24 22:22:46,483 - RAG-System - INFO - Local retrieval successful. Sources: {'THÔNG TIN NHÂN SỰ - SDS (1).xlsx'}
+2026-04-24 22:22:47,703 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-24 22:24:59,285 - aiogram.dispatcher - INFO - Polling stopped
+2026-04-24 22:24:59,287 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-04-24 22:24:59,288 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7753675859)
+2026-04-24 22:24:59,542 - aiogram.dispatcher - INFO - Polling stopped for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'

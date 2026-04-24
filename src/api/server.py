@@ -33,6 +33,10 @@ async def root():
     <head>
         <meta charset="UTF-8"><title>RAG Chatbot Hub</title>
         <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+        <!-- Markdown & Code Highlighting -->
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
         <style>
             :root { --primary: #6366f1; --primary-hover: #4f46e5; --bg: #0f172a; --card-bg: #1e293b; --text: #f8fafc; --text-muted: #94a3b8; }
             body { font-family: 'Outfit', sans-serif; background: var(--bg); color: var(--text); margin: 0; display: flex; flex-direction: column; height: 100vh; overflow: hidden; }
@@ -40,17 +44,32 @@ async def root():
             .nav-links a { margin-left: 1.5rem; text-decoration: none; color: var(--text-muted); font-weight: 500; transition: 0.3s; }
             .nav-links a:hover { color: var(--primary); }
             main { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem; background: radial-gradient(circle at top right, #1e1b4b, var(--bg)); }
-            .chat-container { width: 100%; max-width: 800px; background: var(--card-bg); border-radius: 20px; border: 1px solid #334155; display: flex; flex-direction: column; height: 70vh; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); }
-            #chat-window { flex: 1; overflow-y: auto; padding: 2rem; scrollbar-width: thin; }
+            .chat-container { width: 100%; max-width: 900px; background: var(--card-bg); border-radius: 20px; border: 1px solid #334155; display: flex; flex-direction: column; height: 75vh; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); }
+            #chat-window { flex: 1; overflow-y: auto; padding: 2rem; scrollbar-width: thin; scroll-behavior: smooth; }
             .input-area { padding: 1.5rem; display: flex; gap: 1rem; border-top: 1px solid #334155; }
             input { flex: 1; padding: 1rem; background: #0f172a; border: 1px solid #334155; border-radius: 12px; color: white; outline: none; transition: 0.3s; }
             input:focus { border-color: var(--primary); box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2); }
             button { background: var(--primary); color: white; border: none; padding: 0 2rem; border-radius: 12px; cursor: pointer; font-weight: 600; transition: 0.3s; }
             button:hover { background: var(--primary-hover); transform: translateY(-1px); }
-            .msg { margin-bottom: 1.5rem; padding: 1rem 1.25rem; border-radius: 15px; max-width: 80%; line-height: 1.6; animation: fadeIn 0.3s ease; }
+            .msg { margin-bottom: 1.5rem; padding: 1rem 1.25rem; border-radius: 15px; max-width: 85%; line-height: 1.6; animation: fadeIn 0.3s ease; }
             @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
             .user { align-self: flex-end; background: var(--primary); color: white; margin-left: auto; border-bottom-right-radius: 2px; }
             .bot { align-self: flex-start; background: #334155; border-bottom-left-radius: 2px; }
+            
+            /* Markdown Styles */
+            pre { background: #0f172a; padding: 1rem; border-radius: 8px; overflow-x: auto; position: relative; border: 1px solid #334155; margin: 15px 0; }
+            code { font-family: 'Consolas', monospace; font-size: 0.9rem; }
+            .copy-btn { position: absolute; top: 8px; right: 8px; background: #1e293b; color: var(--text-muted); border: 1px solid #334155; padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; cursor: pointer; transition: 0.3s; }
+            .copy-btn:hover { background: var(--primary); color: white; }
+            
+            .bot table { border-collapse: collapse; width: 100%; margin: 15px 0; font-size: 0.9rem; background: rgba(15, 23, 42, 0.5); border-radius: 8px; overflow: hidden; border: 1px solid #334155; }
+            .bot th, .bot td { border: 1px solid #334155; padding: 12px; text-align: left; }
+            .bot th { background: rgba(99, 102, 241, 0.15); color: #818cf8; }
+            .bot tr:nth-child(even) { background: rgba(255,255,255,0.02); }
+            .bot ul, .bot ol { padding-left: 20px; margin: 10px 0; }
+            .bot li { margin-bottom: 5px; }
+            .bot p { margin-bottom: 10px; line-height: 1.6; }
+            
             .typing-indicator { display: flex; gap: 5px; align-items: center; justify-content: center; height: 15px; }
             .typing-indicator span { width: 8px; height: 8px; background-color: var(--text-muted); border-radius: 50%; animation: typing 1.4s infinite ease-in-out both; }
             .typing-indicator span:nth-child(1) { animation-delay: -0.32s; }
@@ -73,6 +92,25 @@ async def root():
             </div>
         </main>
         <script>
+            function highlightCode() {
+                document.querySelectorAll('pre code').forEach((block) => {
+                    if (!block.dataset.highlighted) {
+                        hljs.highlightElement(block);
+                        block.dataset.highlighted = "true";
+                        const pre = block.parentElement;
+                        const btn = document.createElement('button');
+                        btn.className = 'copy-btn';
+                        btn.innerText = 'Copy';
+                        btn.onclick = () => {
+                            navigator.clipboard.writeText(block.innerText);
+                            btn.innerText = 'Copied!';
+                            setTimeout(() => btn.innerText = 'Copy', 2000);
+                        };
+                        pre.appendChild(btn);
+                    }
+                });
+            }
+
             async function sendMessage() {
                 const input = document.getElementById('user-input');
                 const btn = document.querySelector('.input-area button');
@@ -83,7 +121,6 @@ async def root():
                 
                 chatWindow.insertAdjacentHTML('beforeend', `<div class="msg user">${message}</div>`);
                 input.value = '';
-                
                 input.disabled = true;
                 btn.disabled = true;
                 
@@ -106,7 +143,9 @@ async def root():
                     const loadingElement = document.getElementById(loadingId);
                     if (loadingElement) loadingElement.remove();
                     
-                    chatWindow.insertAdjacentHTML('beforeend', `<div class="msg bot">${data.answer}</div>`);
+                    const htmlResponse = marked.parse(data.answer);
+                    chatWindow.insertAdjacentHTML('beforeend', `<div class="msg bot">${htmlResponse}</div>`);
+                    highlightCode();
                 } catch (error) {
                     const loadingElement = document.getElementById(loadingId);
                     if (loadingElement) loadingElement.remove();
@@ -249,16 +288,30 @@ async def admin_files(request: Request):
 async def admin_config(request: Request):
     if not is_authenticated(request): return RedirectResponse(url="/admin/login", status_code=303)
     
-    content = f'''
+    # Reload env to get latest system prompt
+    from dotenv import load_dotenv
+    load_dotenv(override=True)
+    system_prompt = os.getenv("SYSTEM_PROMPT", "Bạn là một trợ lý AI hữu ích.")
+
+    content = f"""
     <div class="card" style="border-color: #8b5cf6;">
         <h3>🤖 Cấu hình Model AI</h3>
         <p style="color: #94a3b8; font-size: 0.95rem; margin-bottom: 20px; line-height: 1.5;">Nhập tên Model trên OpenRouter (VD: google/gemma-2-9b-it:free, anthropic/claude-3-haiku, ...). Việc cập nhật sẽ được áp dụng ngay lập tức mà không cần khởi động lại.</p>
-        <form action="/update-model" method="post" style="display: flex; gap: 15px;">
+        <form action="/update-model" method="post" style="display: flex; gap: 15px; margin-bottom: 30px;">
             <input type="text" class="form-control" name="model_name" value="{rag_engine.model_name}" required>
             <button type="submit" class="btn btn-primary" style="background: #8b5cf6; border-color: #8b5cf6; white-space: nowrap;">💾 Lưu Model</button>
         </form>
+
+        <hr style="border: 0; border-top: 1px solid #334155; margin: 30px 0;">
+
+        <h3>🎭 Thiết lập Tính cách (System Prompt)</h3>
+        <p style="color: #94a3b8; font-size: 0.95rem; margin-bottom: 20px; line-height: 1.5;">Định hình cách AI trả lời (VD: Bạn là một chuyên gia tài chính, hoặc Bạn là một trợ lý hài hước...).</p>
+        <form action="/update-prompt" method="post">
+            <textarea class="form-control" name="system_prompt" style="width: 100%; height: 100px; margin-bottom: 15px; background: #0f172a; color: white; border: 1px solid #334155; padding: 10px; border-radius: 8px;">{system_prompt}</textarea>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">💾 Lưu thiết lập tính cách</button>
+        </form>
     </div>
-    '''
+    """
     return get_admin_layout("Cấu hình Model AI", content, "config")
 
 @app.get("/admin/logs", response_class=HTMLResponse)
@@ -344,6 +397,31 @@ async def reindex(request: Request):
     if not is_authenticated(request): return RedirectResponse(url="/admin", status_code=303)
     rag_engine.ingest_data()
     return RedirectResponse(url="/admin", status_code=303)
+
+@app.post("/update-prompt")
+async def update_prompt(request: Request, system_prompt: str = Form(...)):
+    if not is_authenticated(request): return RedirectResponse(url="/admin/login", status_code=303)
+    
+    try:
+        if os.path.exists(".env"):
+            with open(".env", "r", encoding="utf-8") as f:
+                lines = f.readlines()
+            
+            with open(".env", "w", encoding="utf-8") as f:
+                prompt_updated = False
+                for line in lines:
+                    if line.startswith("SYSTEM_PROMPT="):
+                        f.write(f"SYSTEM_PROMPT=\"{system_prompt.replace('\\n', '\\\\n').replace('\"', '\\\"')}\"\\n")
+                        prompt_updated = True
+                    else:
+                        f.write(line)
+                
+                if not prompt_updated:
+                    f.write(f"SYSTEM_PROMPT=\"{system_prompt.replace('\\n', '\\\\n').replace('\"', '\\\"')}\"\\n")
+    except Exception as e:
+        print(f"Could not update .env: {e}")
+        
+    return RedirectResponse(url="/admin/config", status_code=303)
 
 @app.post("/update-model")
 async def update_model(request: Request, model_name: str = Form(...)):
