@@ -45,4 +45,9 @@ class ChatDatabase:
             conn.execute("DELETE FROM messages WHERE session_id = ?", (session_id,))
             conn.commit()
 
+    def clear_all_history(self):
+        with sqlite3.connect(self.db_path) as conn:
+            conn.execute("DELETE FROM messages")
+            conn.commit()
+
 db = ChatDatabase()

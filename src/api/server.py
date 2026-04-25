@@ -234,6 +234,19 @@ async def admin_files(request: Request):
                 <button type="submit" class="btn btn-success" style="width:100%">🔄 Bắt đầu Re-index dữ liệu</button>
             </form>
         </div>
+
+        <div class="card" style="border-color: #ef4444;">
+            <h3>⚠️ Khu vực nguy hiểm</h3>
+            <p style="color: #94a3b8; font-size: 0.95rem; margin-bottom: 20px;">Xóa sạch toàn bộ dữ liệu, index và lịch sử trò chuyện.</p>
+            <div style="display: flex; gap: 10px;">
+                <form action="/clear-history" method="post" style="flex: 1;">
+                    <button type="submit" class="btn btn-danger" style="width:100%; background: #f59e0b; border-color: #f59e0b;" onclick="return confirm('Xóa sạch lịch sử trò chuyện của tất cả người dùng?')">🧹 Xóa Lịch sử</button>
+                </form>
+                <form action="/clear-all" method="post" style="flex: 1;">
+                    <button type="submit" class="btn btn-danger" style="width:100%;" onclick="return confirm('CẢNH BÁO: Hành động này sẽ xóa sạch TOÀN BỘ file tài liệu và index. Bạn có chắc chắn?')">🔥 Xóa sạch Tất cả</button>
+                </form>
+            </div>
+        </div>
         
         <script>
             // Drag and Drop Logic
@@ -390,12 +403,37 @@ async def delete_file(request: Request, name: str):
     data_dir = os.getenv("DATA_DIR", "./data")
     file_path = os.path.join(data_dir, name)
     if os.path.exists(file_path): os.remove(file_path)
+    # Tự động re-index sau khi xóa
+    rag_engine.ingest_data()
     return RedirectResponse(url="/admin", status_code=303)
 
 @app.post("/reindex")
 async def reindex(request: Request):
     if not is_authenticated(request): return RedirectResponse(url="/admin", status_code=303)
     rag_engine.ingest_data()
+    return RedirectResponse(url="/admin", status_code=303)
+
+@app.post("/clear-all")
+async def clear_all(request: Request):
+    if not is_authenticated(request): return RedirectResponse(url="/admin", status_code=303)
+    # 1. Xóa file và index
+    rag_engine.clear_all_data()
+    # 2. Xóa database history
+    from src.core.database import db
+    try:
+        db.clear_all_history()
+    except Exception as e:
+        logger.error(f"Error clearing db history: {e}")
+    return RedirectResponse(url="/admin", status_code=303)
+
+@app.post("/clear-history")
+async def clear_history(request: Request):
+    if not is_authenticated(request): return RedirectResponse(url="/admin", status_code=303)
+    from src.core.database import db
+    try:
+        db.clear_all_history()
+    except Exception as e:
+        logger.error(f"Error clearing db history: {e}")
     return RedirectResponse(url="/admin", status_code=303)
 
 @app.post("/update-prompt")

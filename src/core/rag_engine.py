@@ -51,12 +51,14 @@ class RAGEngine:
         
         self.chunks = [] # List of {"content": str, "source": str}
         self.bm25 = None
+        self.index_timestamp = 0
         self.load_index()
 
     def load_index(self):
         if os.path.exists(self.index_file):
             logger.info("Loading existing index...")
             try:
+                self.index_timestamp = os.path.getmtime(self.index_file)
                 with open(self.index_file, "rb") as f:
                     data = pickle.load(f)
                     self.chunks = data["chunks"]
@@ -64,10 +66,45 @@ class RAGEngine:
             except Exception as e:
                 logger.error(f"Error loading index: {e}")
 
+    def reload_if_changed(self):
+        if os.path.exists(self.index_file):
+            current_mtime = os.path.getmtime(self.index_file)
+            if current_mtime > self.index_timestamp:
+                logger.info("Index file changed on disk. Reloading...")
+                self.load_index()
+        elif self.chunks: # Index file deleted but we still have chunks in memory
+            logger.info("Index file deleted from disk. Clearing memory...")
+            self.chunks = []
+            self.bm25 = None
+            self.index_timestamp = 0
+
     def save_index(self):
         os.makedirs(os.path.dirname(self.index_file), exist_ok=True)
         with open(self.index_file, "wb") as f:
             pickle.dump({"chunks": self.chunks, "bm25": self.bm25}, f)
+        self.index_timestamp = os.path.getmtime(self.index_file)
+
+    def clear_all_data(self):
+        """Xóa sạch tất cả tệp dữ liệu, index và bộ nhớ."""
+        logger.info("Clearing all data and index...")
+        # 1. Xóa các tệp trong data_dir
+        if os.path.exists(self.data_dir):
+            for f in os.listdir(self.data_dir):
+                file_path = os.path.join(self.data_dir, f)
+                try:
+                    if os.path.isfile(file_path): os.remove(file_path)
+                except Exception as e:
+                    logger.error(f"Error deleting file {file_path}: {e}")
+        
+        # 2. Xóa file index
+        if os.path.exists(self.index_file):
+            os.remove(self.index_file)
+        
+        # 3. Xóa bộ nhớ
+        self.chunks = []
+        self.bm25 = None
+        self.index_timestamp = 0
+        return "Đã xóa sạch toàn bộ dữ liệu và bộ nhớ index."
 
     def extract_text(self):
         all_docs = []
@@ -120,9 +157,16 @@ class RAGEngine:
     def ingest_data(self):
         logger.info(f"Ingesting data from {self.data_dir}...")
         docs = self.extract_text()
-        if not docs: return "No documents found."
-
+        
+        # Reset current memory
         self.chunks = []
+        self.bm25 = None
+        
+        if not docs:
+            # If no docs, save empty index and return
+            self.save_index()
+            return "No documents found. Index cleared."
+
         for doc in docs:
             content = doc["content"]
             source = doc["source"]
@@ -159,6 +203,7 @@ class RAGEngine:
     def query(self, user_input, session_id="default"):
         from dotenv import load_dotenv
         load_dotenv(override=True)
+        self.reload_if_changed() # Sync with disk
         self.model_name = os.getenv("DEFAULT_MODEL", "google/gemma-2-9b-it:free")
         custom_system_prompt = os.getenv("SYSTEM_PROMPT", "Bạn là một trợ lý AI thông minh.")
         

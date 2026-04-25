@@ -669,3 +669,716 @@ Chàng trai nọ đến nhà vợ sắp cưới,...
 2026-04-24 22:24:59,287 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
 2026-04-24 22:24:59,288 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7753675859)
 2026-04-24 22:24:59,542 - aiogram.dispatcher - INFO - Polling stopped for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-24 22:25:07,290 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-24 22:25:07,980 - RAG-System - INFO - Loading existing index...
+2026-04-24 22:25:09,951 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-24 22:25:10,479 - RAG-System - INFO - Loading existing index...
+2026-04-24 22:25:10,608 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-24 22:25:11,098 - RAG-System - INFO - Telegram Bot is starting...
+2026-04-24 22:25:11,098 - aiogram.dispatcher - INFO - Start polling
+2026-04-24 22:25:11,732 - aiogram.dispatcher - INFO - Run polling for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-24 22:25:16,990 - RAG-System - INFO - Received message from Toanfdn: thông tin về nhân viên cường
+2026-04-24 22:25:18,234 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-24 22:25:18,235 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-24 22:25:18,250 - RAG-System - INFO - Local retrieval successful. Sources: {'THÔNG TIN NHÂN SỰ - SDS (1).xlsx'}
+2026-04-24 22:25:19,652 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-24 22:25:30,629 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-24 22:25:30,629 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-24 22:25:31,076 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-24 22:25:31,102 - aiogram.event - INFO - Update id=260681529 is handled. Duration 14111 ms by bot id=7753675859
+2026-04-25 11:58:59,006 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 11:59:01,242 - RAG-System - INFO - Loading existing index...
+2026-04-25 11:59:07,905 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 11:59:09,169 - RAG-System - INFO - Loading existing index...
+2026-04-25 11:59:09,590 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 11:59:10,616 - RAG-System - INFO - Telegram Bot is starting...
+2026-04-25 11:59:10,619 - aiogram.dispatcher - INFO - Start polling
+2026-04-25 11:59:11,295 - aiogram.dispatcher - INFO - Run polling for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-25 11:59:11,532 - RAG-System - INFO - Received message from Toanfdn: Thông tin về hương ly
+2026-04-25 11:59:12,930 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-25 11:59:12,936 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 11:59:12,985 - RAG-System - INFO - Local retrieval successful. Sources: {'THÔNG TIN NHÂN SỰ - SDS (1).xlsx'}
+2026-04-25 11:59:14,928 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-25 11:59:19,087 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-25 11:59:19,089 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-25 11:59:19,557 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-25 11:59:19,560 - aiogram.event - INFO - Update id=260681530 is handled. Duration 8029 ms by bot id=7753675859
+2026-04-25 11:59:57,993 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 12:01:49,585 - RAG-System - INFO - Received message from Toanfdn: Thông tin nhân viên toàn
+2026-04-25 12:01:50,665 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-25 12:01:50,668 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 12:01:50,694 - RAG-System - INFO - Local retrieval successful. Sources: {'Book1.xlsx', 'THÔNG TIN NHÂN SỰ - SDS (1).xlsx'}
+2026-04-25 12:01:51,690 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-25 12:02:22,239 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-25 12:02:22,242 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-25 12:02:22,660 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-25 12:02:22,660 - aiogram.event - INFO - Update id=260681531 is handled. Duration 33076 ms by bot id=7753675859
+2026-04-25 17:32:58,590 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:32:59,341 - RAG-System - INFO - Loading existing index...
+2026-04-25 17:33:00,352 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:33:01,027 - RAG-System - INFO - Loading existing index...
+2026-04-25 17:33:01,360 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:33:01,934 - RAG-System - INFO - Telegram Bot is starting...
+2026-04-25 17:33:01,941 - aiogram.dispatcher - INFO - Start polling
+2026-04-25 17:33:02,660 - aiogram.dispatcher - INFO - Run polling for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-25 17:33:03,409 - RAG-System - INFO - Received message from Toanfdn: .
+2026-04-25 17:33:03,727 - RAG-System - INFO - Received message from Toanfdn: .
+2026-04-25 17:33:04,033 - RAG-System - INFO - Received message from Toanfdn: .
+2026-04-25 17:33:04,254 - RAG-System - INFO - Received message from Toanfdn: .
+2026-04-25 17:33:04,461 - RAG-System - INFO - Received message from Toanfdn: .
+2026-04-25 17:33:04,629 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-25 17:33:04,634 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:33:04,649 - RAG-System - INFO - Local retrieval successful. Sources: {'ola.pdf'}
+2026-04-25 17:33:04,691 - RAG-System - INFO - Received message from Toanfdn: .
+2026-04-25 17:33:04,899 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-25 17:33:04,918 - RAG-System - INFO - Received message from Toanfdn: ..
+2026-04-25 17:33:04,920 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:33:04,933 - RAG-System - INFO - Local retrieval successful. Sources: {'ola.pdf'}
+2026-04-25 17:33:05,233 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-25 17:33:05,236 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:33:05,253 - RAG-System - INFO - Local retrieval successful. Sources: {'ola.pdf'}
+2026-04-25 17:33:05,293 - RAG-System - INFO - Received message from Toanfdn: .
+2026-04-25 17:33:05,456 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-25 17:33:05,465 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:33:05,474 - RAG-System - INFO - Local retrieval successful. Sources: {'ola.pdf'}
+2026-04-25 17:33:05,491 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-25 17:33:05,500 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:33:05,516 - RAG-System - INFO - Local retrieval successful. Sources: {'ola.pdf'}
+2026-04-25 17:33:05,533 - RAG-System - INFO - Received message from Toanfdn: .
+2026-04-25 17:33:05,661 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-25 17:33:05,667 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:33:05,676 - RAG-System - INFO - Local retrieval successful. Sources: {'ola.pdf'}
+2026-04-25 17:33:05,684 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-25 17:33:05,691 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:33:05,704 - RAG-System - INFO - Local retrieval successful. Sources: {'ola.pdf'}
+2026-04-25 17:33:05,742 - RAG-System - INFO - Received message from Toanfdn: ..
+2026-04-25 17:33:05,987 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-25 17:33:06,083 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-25 17:33:06,098 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:33:06,108 - RAG-System - INFO - Local retrieval successful. Sources: {'ola.pdf'}
+2026-04-25 17:33:06,197 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-25 17:33:06,209 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-25 17:33:06,223 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-25 17:33:06,341 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-25 17:33:06,381 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-25 17:33:06,419 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-25 17:33:06,525 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-25 17:33:06,534 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-25 17:33:06,739 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-25 17:33:14,801 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-25 17:33:14,801 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-25 17:33:14,803 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:33:14,812 - RAG-System - INFO - Local retrieval successful. Sources: {'ola.pdf'}
+2026-04-25 17:33:15,265 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-25 17:33:15,266 - aiogram.event - INFO - Update id=260681534 is handled. Duration 11232 ms by bot id=7753675859
+2026-04-25 17:33:15,520 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-25 17:33:16,891 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-25 17:33:16,892 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-25 17:33:16,893 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:33:16,900 - RAG-System - INFO - Local retrieval successful. Sources: {'ola.pdf'}
+2026-04-25 17:33:17,318 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-25 17:33:17,319 - aiogram.event - INFO - Update id=260681540 is handled. Duration 11786 ms by bot id=7753675859
+2026-04-25 17:33:17,502 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-25 17:33:18,053 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-25 17:33:18,054 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-25 17:33:18,511 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-25 17:33:18,511 - aiogram.event - INFO - Update id=260681533 is handled. Duration 14784 ms by bot id=7753675859
+2026-04-25 17:33:19,241 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-25 17:33:19,242 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-25 17:33:19,636 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-25 17:33:19,637 - aiogram.event - INFO - Update id=260681541 is handled. Duration 13895 ms by bot id=7753675859
+2026-04-25 17:33:23,693 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-25 17:33:23,693 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-25 17:33:23,966 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-25 17:33:23,966 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-25 17:33:24,152 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-25 17:33:24,153 - aiogram.event - INFO - Update id=260681537 is handled. Duration 19462 ms by bot id=7753675859
+2026-04-25 17:33:24,418 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-25 17:33:24,418 - aiogram.event - INFO - Update id=260681539 is handled. Duration 19125 ms by bot id=7753675859
+2026-04-25 17:33:26,478 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-25 17:33:26,482 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-25 17:33:26,930 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-25 17:33:26,933 - aiogram.event - INFO - Update id=260681538 is handled. Duration 22015 ms by bot id=7753675859
+2026-04-25 17:33:28,830 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-25 17:33:28,830 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-25 17:33:29,818 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-25 17:33:29,818 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-25 17:33:29,888 - RAG-System - ERROR - Error handling message: Telegram server says - Bad Request: MESSAGE_TOO_LONG
+2026-04-25 17:33:30,445 - aiogram.event - INFO - Update id=260681535 is handled. Duration 26191 ms by bot id=7753675859
+2026-04-25 17:33:30,593 - RAG-System - ERROR - Error handling message: Telegram server says - Bad Request: MESSAGE_TOO_LONG
+2026-04-25 17:33:30,995 - aiogram.event - INFO - Update id=260681536 is handled. Duration 26533 ms by bot id=7753675859
+2026-04-25 17:33:42,900 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-25 17:33:42,901 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-25 17:33:43,668 - RAG-System - ERROR - Error handling message: Telegram server says - Bad Request: MESSAGE_TOO_LONG
+2026-04-25 17:33:44,051 - aiogram.event - INFO - Update id=260681532 is handled. Duration 40642 ms by bot id=7753675859
+2026-04-25 17:34:06,278 - RAG-System - INFO - Ingesting data from ./data...
+2026-04-25 17:35:14,253 - aiogram.dispatcher - INFO - Polling stopped
+2026-04-25 17:35:14,264 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-04-25 17:35:14,264 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7753675859)
+2026-04-25 17:35:14,528 - aiogram.dispatcher - INFO - Polling stopped for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-25 17:37:53,820 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:37:54,999 - RAG-System - INFO - Loading existing index...
+2026-04-25 17:37:57,346 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:37:58,006 - RAG-System - INFO - Loading existing index...
+2026-04-25 17:37:58,187 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:37:58,771 - RAG-System - INFO - Telegram Bot is starting...
+2026-04-25 17:37:58,772 - aiogram.dispatcher - INFO - Start polling
+2026-04-25 17:37:59,448 - aiogram.dispatcher - INFO - Run polling for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-25 17:39:08,002 - RAG-System - INFO - Ingesting data from ./data...
+2026-04-25 17:39:18,357 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:39:18,373 - RAG-System - INFO - Local retrieval successful. Sources: {'New Text Document.txt'}
+2026-04-25 17:39:20,476 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-25 17:39:49,680 - RAG-System - INFO - Received message from Toanfdn: sươn tùng sinh năm bao nhiêu
+2026-04-25 17:39:50,885 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-25 17:39:50,889 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:39:50,912 - RAG-System - INFO - Local retrieval successful. Sources: {'Book1.xlsx', 'THÔNG TIN NHÂN SỰ - SDS (1).xlsx'}
+2026-04-25 17:39:52,184 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-25 17:39:59,397 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-25 17:39:59,397 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-25 17:39:59,792 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-25 17:39:59,793 - aiogram.event - INFO - Update id=260681542 is handled. Duration 10112 ms by bot id=7753675859
+2026-04-25 17:40:35,170 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:40:44,252 - RAG-System - INFO - Ingesting data from ./data...
+2026-04-25 17:40:46,248 - RAG-System - INFO - Ingesting data from ./data...
+2026-04-25 17:40:58,516 - aiogram.dispatcher - INFO - Polling stopped
+2026-04-25 17:40:58,518 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-04-25 17:40:58,519 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7753675859)
+2026-04-25 17:40:58,781 - aiogram.dispatcher - INFO - Polling stopped for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-25 17:41:28,761 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:41:29,641 - RAG-System - INFO - Loading existing index...
+2026-04-25 17:41:31,827 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:41:32,483 - RAG-System - INFO - Loading existing index...
+2026-04-25 17:41:32,488 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:41:33,027 - RAG-System - INFO - Telegram Bot is starting...
+2026-04-25 17:41:33,028 - aiogram.dispatcher - INFO - Start polling
+2026-04-25 17:41:33,672 - aiogram.dispatcher - INFO - Run polling for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-25 17:41:33,899 - RAG-System - INFO - Received message from Toanfdn: hj
+2026-04-25 17:41:33,903 - RAG-System - INFO - Received message from Toanfdn: .
+2026-04-25 17:41:33,904 - RAG-System - INFO - Received message from Toanfdn: .
+2026-04-25 17:41:33,906 - RAG-System - INFO - Received message from Toanfdn: .
+2026-04-25 17:41:33,907 - RAG-System - INFO - Received message from Toanfdn: ..
+2026-04-25 17:41:33,912 - RAG-System - INFO - Received message from Toanfdn: ...
+2026-04-25 17:41:33,916 - RAG-System - INFO - Received message from Toanfdn: ....
+2026-04-25 17:41:33,941 - RAG-System - INFO - Received message from Toanfdn: .
+2026-04-25 17:41:33,948 - RAG-System - INFO - Received message from Toanfdn: ..
+2026-04-25 17:41:33,957 - RAG-System - INFO - Received message from Toanfdn: .
+2026-04-25 17:41:33,974 - RAG-System - INFO - Received message from Toanfdn: .
+2026-04-25 17:41:33,982 - RAG-System - INFO - Received message from Toanfdn: ..
+2026-04-25 17:41:33,990 - RAG-System - INFO - Received message from Toanfdn: ...
+2026-04-25 17:41:33,997 - RAG-System - INFO - Received message from Toanfdn: .
+2026-04-25 17:41:34,006 - RAG-System - INFO - Received message from Toanfdn: .
+2026-04-25 17:41:34,011 - RAG-System - INFO - Received message from Toanfdn: .
+2026-04-25 17:41:34,021 - RAG-System - INFO - Received message from Toanfdn: ..
+2026-04-25 17:41:34,028 - RAG-System - INFO - Received message from Toanfdn: ...
+2026-04-25 17:41:34,031 - RAG-System - INFO - Received message from Toanfdn: ....
+2026-04-25 17:41:34,038 - RAG-System - INFO - Received message from Toanfdn: .
+2026-04-25 17:41:34,041 - RAG-System - INFO - Received message from Toanfdn: .
+2026-04-25 17:41:35,147 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-25 17:41:35,154 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-25 17:41:35,157 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:41:35,165 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:41:35,166 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-25 17:41:35,189 - RAG-System - INFO - Performing web search for: hj
+2026-04-25 17:41:35,190 - RAG-System - INFO - Performing web search for: .
+2026-04-25 17:41:35,199 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:41:35,215 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-25 17:41:35,224 - RAG-System - INFO - Performing web search for: .
+2026-04-25 17:41:35,230 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:41:35,239 - RAG-System - INFO - Performing web search for: ...
+2026-04-25 17:41:35,241 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-25 17:41:35,248 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:41:35,266 - RAG-System - INFO - Performing web search for: ..
+2026-04-25 17:41:35,280 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-25 17:41:35,290 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:41:35,305 - RAG-System - INFO - Performing web search for: .
+2026-04-25 17:41:35,331 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-25 17:41:35,332 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-25 17:41:35,336 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:41:35,355 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:41:35,357 - RAG-System - INFO - Performing web search for: ....
+2026-04-25 17:41:35,358 - RAG-System - INFO - Performing web search for: .
+2026-04-25 17:41:35,366 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-25 17:41:35,414 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-25 17:41:35,432 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-25 17:41:35,484 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-25 17:41:35,521 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-25 17:41:35,537 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-25 17:41:35,579 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-25 17:41:35,597 - primp - INFO - response: https://www.bing.com/search?q=hj 200
+2026-04-25 17:41:35,605 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-25 17:41:35,621 - primp - INFO - response: https://www.bing.com/search?q=. 200
+2026-04-25 17:41:35,621 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-25 17:41:35,622 - primp - INFO - response: https://www.bing.com/search?q=. 200
+2026-04-25 17:41:35,623 - primp - INFO - response: https://www.bing.com/search?q=... 200
+2026-04-25 17:41:35,636 - primp - INFO - response: https://www.bing.com/search?q=. 200
+2026-04-25 17:41:35,640 - primp - INFO - response: https://www.bing.com/search?q=. 200
+2026-04-25 17:41:35,648 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-25 17:41:35,648 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-25 17:41:35,650 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:41:35,656 - primp - INFO - response: https://www.bing.com/search?q=.... 200
+2026-04-25 17:41:35,657 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-25 17:41:35,664 - RAG-System - INFO - Performing web search for: ..
+2026-04-25 17:41:35,675 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-25 17:41:35,683 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:41:35,695 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-25 17:41:35,700 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-25 17:41:35,705 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:41:35,707 - RAG-System - INFO - Performing web search for: .
+2026-04-25 17:41:35,707 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-25 17:41:35,713 - RAG-System - INFO - Performing web search for: .
+2026-04-25 17:41:35,722 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-25 17:41:35,737 - RAG-System - ERROR - Error handling message: Telegram server says - Flood control exceeded on method 'SendChatAction' in chat 7317924541. Retry in 5 seconds.
+Original description: Too Many Requests: retry after 5
+(background on this error at: https://core.telegram.org/bots/faq#my-bot-is-hitting-limits-how-do-i-avoid-this)
+2026-04-25 17:41:35,741 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-25 17:41:35,864 - primp - INFO - response: https://www.bing.com/search?q=.. 200
+2026-04-25 17:41:35,871 - primp - INFO - response: https://www.bing.com/search?q=.. 200
+2026-04-25 17:41:35,899 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-25 17:41:35,899 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-25 17:41:35,905 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:41:35,905 - primp - INFO - response: https://www.bing.com/search?q=. 200
+2026-04-25 17:41:35,906 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-25 17:41:35,908 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:41:35,913 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-25 17:41:35,915 - RAG-System - INFO - Performing web search for: ..
+2026-04-25 17:41:35,916 - RAG-System - INFO - Performing web search for: .
+2026-04-25 17:41:35,928 - primp - INFO - response: https://www.bing.com/search?q=. 200
+2026-04-25 17:41:35,954 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-25 17:41:35,954 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-25 17:41:35,956 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:41:35,965 - RAG-System - INFO - Performing web search for: ...
+2026-04-25 17:41:36,062 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-25 17:41:36,103 - primp - INFO - response: https://www.bing.com/search?q=. 200
+2026-04-25 17:41:36,123 - primp - INFO - response: https://www.bing.com/search?q=.. 200
+2026-04-25 17:41:36,125 - aiogram.event - INFO - Update id=260681545 is handled. Duration 2221 ms by bot id=7753675859
+2026-04-25 17:41:36,203 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-25 17:41:36,207 - primp - INFO - response: https://www.bing.com/search?q=... 200
+2026-04-25 17:41:36,231 - aiogram.event - INFO - Update id=260681550 is handled. Duration 2290 ms by bot id=7753675859
+2026-04-25 17:41:36,235 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-25 17:41:36,239 - aiogram.event - INFO - Update id=260681543 is handled. Duration 2340 ms by bot id=7753675859
+2026-04-25 17:41:36,241 - aiogram.event - INFO - Update id=260681561 is handled. Duration 2209 ms by bot id=7753675859
+2026-04-25 17:41:36,306 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-25 17:41:36,307 - aiogram.event - INFO - Update id=260681546 is handled. Duration 2401 ms by bot id=7753675859
+2026-04-25 17:41:36,324 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-25 17:41:36,325 - aiogram.event - INFO - Update id=260681551 is handled. Duration 2376 ms by bot id=7753675859
+2026-04-25 17:41:36,330 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-25 17:41:36,330 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-25 17:41:36,332 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:41:36,346 - RAG-System - INFO - Performing web search for: .
+2026-04-25 17:41:36,347 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-25 17:41:36,350 - aiogram.event - INFO - Update id=260681552 is handled. Duration 2393 ms by bot id=7753675859
+2026-04-25 17:41:36,498 - primp - INFO - response: https://www.bing.com/search?q=. 200
+2026-04-25 17:41:36,569 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-25 17:41:36,570 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:41:36,570 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-25 17:41:36,572 - RAG-System - INFO - Performing web search for: ..
+2026-04-25 17:41:36,595 - primp - INFO - response: https://www.bing.com/search?q=...&first=11&FORM=PERE 200
+2026-04-25 17:41:36,597 - primp - INFO - response: https://www.bing.com/search?q=....&first=11&FORM=PERE 200
+2026-04-25 17:41:36,717 - primp - INFO - response: https://www.bing.com/search?q=.. 200
+2026-04-25 17:41:36,719 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-25 17:41:36,720 - aiogram.event - INFO - Update id=260681554 is handled. Duration 2737 ms by bot id=7753675859
+2026-04-25 17:41:36,748 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-25 17:41:36,748 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-25 17:41:36,750 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:41:36,758 - RAG-System - INFO - Performing web search for: .
+2026-04-25 17:41:36,801 - primp - INFO - response: https://www.bing.com/search?q=..&first=11&FORM=PERE 200
+2026-04-25 17:41:36,830 - primp - INFO - response: https://www.bing.com/search?q=.&first=11&FORM=PERE 200
+2026-04-25 17:41:36,914 - primp - INFO - response: https://www.bing.com/search?q=. 200
+2026-04-25 17:41:36,960 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-25 17:41:36,966 - aiogram.event - INFO - Update id=260681555 is handled. Duration 2976 ms by bot id=7753675859
+2026-04-25 17:41:37,020 - primp - INFO - response: https://www.bing.com/search?q=.&first=11&FORM=PERE 200
+2026-04-25 17:41:37,053 - RAG-System - INFO - Using web search results.
+2026-04-25 17:41:37,083 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-25 17:41:37,083 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-25 17:41:37,095 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:41:37,099 - RAG-System - INFO - Performing web search for: ...
+2026-04-25 17:41:37,139 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-25 17:41:37,139 - aiogram.event - INFO - Update id=260681559 is handled. Duration 3118 ms by bot id=7753675859
+2026-04-25 17:41:37,232 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-25 17:41:37,233 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-25 17:41:37,234 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:41:37,242 - RAG-System - INFO - Performing web search for: .
+2026-04-25 17:41:37,273 - primp - INFO - response: https://www.bing.com/search?q=.&first=11&FORM=PERE 200
+2026-04-25 17:41:37,278 - primp - INFO - response: https://www.bing.com/search?q=... 200
+2026-04-25 17:41:37,408 - primp - INFO - response: https://www.bing.com/search?q=.&first=11&FORM=PERE 200
+2026-04-25 17:41:37,420 - primp - INFO - response: https://www.bing.com/search?q=. 200
+2026-04-25 17:41:37,497 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-25 17:41:37,498 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-25 17:41:37,500 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:41:37,502 - RAG-System - INFO - Performing web search for: .
+2026-04-25 17:41:37,523 - primp - INFO - response: https://www.bing.com/search?q=....&first=21&FORM=PERE1 200
+2026-04-25 17:41:37,529 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-25 17:41:37,529 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-25 17:41:37,578 - primp - INFO - response: https://www.bing.com/search?q=...&first=21&FORM=PERE1 200
+2026-04-25 17:41:37,675 - primp - INFO - response: https://www.bing.com/search?q=. 200
+2026-04-25 17:41:37,722 - primp - INFO - response: https://www.bing.com/search?q=..&first=21&FORM=PERE1 200
+2026-04-25 17:41:37,802 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-25 17:41:37,803 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-25 17:41:38,258 - primp - INFO - response: https://www.bing.com/search?q=.&first=21&FORM=PERE1 200
+2026-04-25 17:41:38,503 - primp - INFO - response: https://www.bing.com/search?q=...&first=31&FORM=PERE2 200
+2026-04-25 17:41:38,598 - primp - INFO - response: https://www.bing.com/search?q=....&first=31&FORM=PERE2 200
+2026-04-25 17:41:38,599 - primp - INFO - response: https://www.bing.com/search?q=.&first=11&FORM=PERE 200
+2026-04-25 17:41:38,739 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-25 17:41:38,758 - primp - INFO - response: https://www.bing.com/search?q=..&first=31&FORM=PERE2 200
+2026-04-25 17:41:39,176 - primp - INFO - response: https://www.bing.com/search?q=.&first=31&FORM=PERE2 200
+2026-04-25 17:41:39,416 - primp - INFO - response: https://www.bing.com/search?q=...&first=41&FORM=PERE3 200
+2026-04-25 17:41:39,524 - primp - INFO - response: https://www.bing.com/search?q=.&first=21&FORM=PERE1 200
+2026-04-25 17:41:39,592 - primp - INFO - response: https://www.bing.com/search?q=....&first=41&FORM=PERE3 200
+2026-04-25 17:41:39,605 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-25 17:41:39,606 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-25 17:41:39,622 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-25 17:41:39,623 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-25 17:41:39,662 - primp - INFO - response: https://www.bing.com/search?q=..&first=41&FORM=PERE3 200
+2026-04-25 17:41:39,691 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-25 17:41:39,692 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-25 17:41:40,118 - primp - INFO - response: https://www.bing.com/search?q=.&first=41&FORM=PERE3 200
+2026-04-25 17:41:40,148 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-25 17:41:40,149 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-25 17:41:40,405 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-25 17:41:40,405 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-25 17:41:40,483 - primp - INFO - response: https://www.bing.com/search?q=.&first=31&FORM=PERE2 200
+2026-04-25 17:41:40,649 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-25 17:41:40,650 - aiogram.event - INFO - Update id=260681553 is handled. Duration 6676 ms by bot id=7753675859
+2026-04-25 17:41:40,830 - RAG-System - INFO - Received message from Toanfdn: hj
+2026-04-25 17:41:40,837 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-25 17:41:40,838 - aiogram.event - INFO - Update id=260681558 is handled. Duration 6826 ms by bot id=7753675859
+2026-04-25 17:41:40,857 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-25 17:41:40,866 - aiogram.event - INFO - Update id=260681562 is handled. Duration 6828 ms by bot id=7753675859
+2026-04-25 17:41:40,882 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-25 17:41:40,882 - aiogram.event - INFO - Update id=260681556 is handled. Duration 6885 ms by bot id=7753675859
+2026-04-25 17:41:40,905 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-25 17:41:40,905 - aiogram.event - INFO - Update id=260681560 is handled. Duration 6877 ms by bot id=7753675859
+2026-04-25 17:41:40,925 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-25 17:41:40,939 - aiogram.event - INFO - Update id=260681548 is handled. Duration 7026 ms by bot id=7753675859
+2026-04-25 17:41:40,950 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-25 17:41:40,951 - aiogram.event - INFO - Update id=260681549 is handled. Duration 7034 ms by bot id=7753675859
+2026-04-25 17:41:40,971 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-25 17:41:40,974 - aiogram.event - INFO - Update id=260681547 is handled. Duration 7066 ms by bot id=7753675859
+2026-04-25 17:41:40,990 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-25 17:41:40,990 - aiogram.event - INFO - Update id=260681557 is handled. Duration 6984 ms by bot id=7753675859
+2026-04-25 17:41:41,027 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-25 17:41:41,039 - aiogram.event - INFO - Update id=260681544 is handled. Duration 7136 ms by bot id=7753675859
+2026-04-25 17:41:41,412 - primp - INFO - response: https://www.bing.com/search?q=.&first=41&FORM=PERE3 200
+2026-04-25 17:41:41,459 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-25 17:41:41,462 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-25 17:41:41,614 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-25 17:41:41,620 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:41:41,633 - RAG-System - INFO - Performing web search for: hj
+2026-04-25 17:41:41,874 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-25 17:41:41,874 - primp - INFO - response: https://www.bing.com/search?q=hj 200
+2026-04-25 17:41:41,904 - aiogram.event - INFO - Update id=260681563 is handled. Duration 7862 ms by bot id=7753675859
+2026-04-25 17:41:41,917 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-25 17:41:41,946 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-25 17:41:42,353 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-25 17:41:42,353 - aiogram.event - INFO - Update id=260681564 is handled. Duration 1523 ms by bot id=7753675859
+2026-04-25 17:41:47,807 - RAG-System - INFO - Received message from Toanfdn: hj
+2026-04-25 17:41:48,574 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-25 17:41:48,576 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:41:48,580 - RAG-System - INFO - Performing web search for: hj
+2026-04-25 17:41:48,788 - primp - INFO - response: https://www.bing.com/search?q=hj 200
+2026-04-25 17:41:49,174 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-25 17:41:49,174 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-25 17:41:49,571 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-25 17:41:49,571 - aiogram.event - INFO - Update id=260681565 is handled. Duration 1764 ms by bot id=7753675859
+2026-04-25 17:41:58,244 - RAG-System - INFO - Received message from Toanfdn: .
+2026-04-25 17:41:58,450 - RAG-System - INFO - Received message from Toanfdn: .
+2026-04-25 17:41:58,734 - RAG-System - INFO - Received message from Toanfdn: .
+2026-04-25 17:41:59,033 - RAG-System - INFO - Received message from Toanfdn: .
+2026-04-25 17:41:59,047 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-25 17:41:59,050 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:41:59,063 - RAG-System - INFO - Performing web search for: .
+2026-04-25 17:41:59,225 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-25 17:41:59,227 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:41:59,230 - RAG-System - INFO - Performing web search for: .
+2026-04-25 17:41:59,402 - primp - INFO - response: https://www.bing.com/search?q=. 200
+2026-04-25 17:41:59,463 - primp - INFO - response: https://www.bing.com/search?q=. 200
+2026-04-25 17:41:59,468 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-25 17:41:59,475 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-25 17:41:59,550 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-25 17:41:59,552 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:41:59,559 - RAG-System - INFO - Performing web search for: .
+2026-04-25 17:41:59,695 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-25 17:41:59,695 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-25 17:41:59,734 - primp - INFO - response: https://www.bing.com/search?q=. 200
+2026-04-25 17:41:59,774 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-25 17:41:59,774 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-25 17:41:59,879 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-25 17:41:59,880 - aiogram.event - INFO - Update id=260681566 is handled. Duration 1636 ms by bot id=7753675859
+2026-04-25 17:41:59,894 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-25 17:41:59,899 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:41:59,908 - RAG-System - INFO - Performing web search for: .
+2026-04-25 17:42:00,085 - primp - INFO - response: https://www.bing.com/search?q=. 200
+2026-04-25 17:42:00,106 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-25 17:42:00,106 - aiogram.event - INFO - Update id=260681567 is handled. Duration 1656 ms by bot id=7753675859
+2026-04-25 17:42:00,175 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-25 17:42:00,176 - aiogram.event - INFO - Update id=260681568 is handled. Duration 1441 ms by bot id=7753675859
+2026-04-25 17:42:00,366 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-25 17:42:00,368 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-25 17:42:00,759 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-25 17:42:00,759 - aiogram.event - INFO - Update id=260681569 is handled. Duration 1725 ms by bot id=7753675859
+2026-04-25 17:42:07,460 - aiogram.dispatcher - INFO - Polling stopped
+2026-04-25 17:42:07,462 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-04-25 17:42:07,462 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7753675859)
+2026-04-25 17:42:07,715 - aiogram.dispatcher - INFO - Polling stopped for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-25 17:43:09,355 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:43:09,839 - RAG-System - INFO - Loading existing index...
+2026-04-25 17:43:11,821 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:43:12,326 - RAG-System - INFO - Loading existing index...
+2026-04-25 17:43:12,332 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:43:13,886 - RAG-System - INFO - Telegram Bot is starting...
+2026-04-25 17:43:13,886 - aiogram.dispatcher - INFO - Start polling
+2026-04-25 17:43:14,525 - aiogram.dispatcher - INFO - Run polling for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-25 17:44:22,292 - aiogram.dispatcher - INFO - Polling stopped
+2026-04-25 17:44:22,294 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-04-25 17:44:22,294 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7753675859)
+2026-04-25 17:44:22,550 - aiogram.dispatcher - INFO - Polling stopped for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-25 17:44:42,491 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:44:43,074 - RAG-System - INFO - Loading existing index...
+2026-04-25 17:44:45,295 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:44:45,811 - RAG-System - INFO - Loading existing index...
+2026-04-25 17:44:45,818 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:44:46,282 - RAG-System - INFO - Telegram Bot is starting...
+2026-04-25 17:44:46,282 - aiogram.dispatcher - INFO - Start polling
+2026-04-25 17:44:46,910 - aiogram.dispatcher - INFO - Run polling for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-25 17:45:00,664 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:45:00,667 - RAG-System - INFO - Local retrieval successful. Sources: {'New Text Document.txt'}
+2026-04-25 17:45:02,337 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-25 17:45:40,674 - RAG-System - INFO - Ingesting data from ./data...
+2026-04-25 17:45:42,166 - RAG-System - INFO - Ingesting data from ./data...
+2026-04-25 17:45:43,435 - RAG-System - INFO - Ingesting data from ./data...
+2026-04-25 17:45:49,043 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:45:49,055 - RAG-System - INFO - Local retrieval successful. Sources: {'New Text Document.txt'}
+2026-04-25 17:45:49,774 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-25 17:46:27,026 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:46:27,029 - RAG-System - INFO - Local retrieval successful. Sources: {'New Text Document.txt'}
+2026-04-25 17:46:28,125 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-25 17:46:38,788 - RAG-System - INFO - Received message from Toanfdn: đị mixi là ai
+2026-04-25 17:46:40,027 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-25 17:46:40,029 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:46:40,033 - RAG-System - INFO - Local retrieval successful. Sources: {'New Text Document.txt'}
+2026-04-25 17:46:41,492 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-25 17:46:44,389 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-25 17:46:44,393 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-25 17:46:44,787 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-25 17:46:44,787 - aiogram.event - INFO - Update id=260681570 is handled. Duration 6000 ms by bot id=7753675859
+2026-04-25 17:47:04,199 - aiogram.dispatcher - INFO - Polling stopped
+2026-04-25 17:47:04,201 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-04-25 17:47:04,203 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7753675859)
+2026-04-25 17:47:04,469 - aiogram.dispatcher - INFO - Polling stopped for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-25 17:47:50,187 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:47:50,770 - RAG-System - INFO - Loading existing index...
+2026-04-25 17:47:53,823 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:47:54,515 - RAG-System - INFO - Loading existing index...
+2026-04-25 17:47:54,520 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:47:55,039 - RAG-System - INFO - Telegram Bot is starting...
+2026-04-25 17:47:55,039 - aiogram.dispatcher - INFO - Start polling
+2026-04-25 17:47:55,688 - aiogram.dispatcher - INFO - Run polling for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-25 17:48:47,316 - aiogram.dispatcher - INFO - Polling stopped
+2026-04-25 17:48:47,317 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-04-25 17:48:47,318 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7753675859)
+2026-04-25 17:48:47,580 - aiogram.dispatcher - INFO - Polling stopped for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-25 17:49:00,146 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:49:00,982 - RAG-System - INFO - Loading existing index...
+2026-04-25 17:49:03,509 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:49:04,055 - RAG-System - INFO - Loading existing index...
+2026-04-25 17:49:04,059 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:49:04,568 - RAG-System - INFO - Telegram Bot is starting...
+2026-04-25 17:49:04,569 - aiogram.dispatcher - INFO - Start polling
+2026-04-25 17:49:05,198 - aiogram.dispatcher - INFO - Run polling for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-25 17:49:46,648 - aiogram.dispatcher - INFO - Polling stopped
+2026-04-25 17:49:46,650 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-04-25 17:49:46,651 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7753675859)
+2026-04-25 17:49:46,905 - aiogram.dispatcher - INFO - Polling stopped for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-25 17:49:57,170 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:49:57,693 - RAG-System - INFO - Loading existing index...
+2026-04-25 17:50:00,170 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:50:00,768 - RAG-System - INFO - Loading existing index...
+2026-04-25 17:50:00,776 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:50:01,237 - RAG-System - INFO - Telegram Bot is starting...
+2026-04-25 17:50:01,237 - aiogram.dispatcher - INFO - Start polling
+2026-04-25 17:50:01,890 - aiogram.dispatcher - INFO - Run polling for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-25 17:50:04,919 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:50:04,923 - RAG-System - INFO - Local retrieval successful. Sources: {'New Text Document.txt'}
+2026-04-25 17:50:06,568 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-25 17:50:59,198 - RAG-System - INFO - Ingesting data from ./data...
+2026-04-25 17:51:00,874 - RAG-System - INFO - Ingesting data from ./data...
+2026-04-25 17:51:03,469 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:51:16,910 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:51:16,913 - RAG-System - INFO - Local retrieval successful. Sources: {'domixi.txt'}
+2026-04-25 17:51:18,070 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-25 17:51:39,686 - RAG-System - INFO - Received message from Toanfdn: độ mixi quê ở đâu?
+2026-04-25 17:51:40,877 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-25 17:51:40,879 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:51:40,883 - RAG-System - INFO - Local retrieval successful. Sources: {'New Text Document.txt'}
+2026-04-25 17:51:42,187 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-25 17:51:45,190 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-25 17:51:45,191 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-25 17:51:45,608 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-25 17:51:45,608 - aiogram.event - INFO - Update id=260681571 is handled. Duration 5923 ms by bot id=7753675859
+2026-04-25 17:52:05,406 - aiogram.dispatcher - INFO - Polling stopped
+2026-04-25 17:52:05,409 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-04-25 17:52:05,413 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7753675859)
+2026-04-25 17:52:05,673 - aiogram.dispatcher - INFO - Polling stopped for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-25 17:52:35,595 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:52:36,144 - RAG-System - INFO - Loading existing index...
+2026-04-25 17:52:39,000 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:52:39,528 - RAG-System - INFO - Loading existing index...
+2026-04-25 17:52:39,532 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:52:39,995 - RAG-System - INFO - Telegram Bot is starting...
+2026-04-25 17:52:39,996 - aiogram.dispatcher - INFO - Start polling
+2026-04-25 17:52:40,637 - aiogram.dispatcher - INFO - Run polling for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-25 17:53:53,870 - aiogram.dispatcher - INFO - Polling stopped
+2026-04-25 17:53:53,872 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-04-25 17:53:53,873 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7753675859)
+2026-04-25 17:53:54,125 - aiogram.dispatcher - INFO - Polling stopped for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-25 17:57:05,555 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:57:06,123 - RAG-System - INFO - Loading existing index...
+2026-04-25 17:57:09,084 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:57:09,903 - RAG-System - INFO - Loading existing index...
+2026-04-25 17:57:09,906 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:57:10,463 - RAG-System - INFO - Telegram Bot is starting...
+2026-04-25 17:57:10,464 - aiogram.dispatcher - INFO - Start polling
+2026-04-25 17:57:11,130 - aiogram.dispatcher - INFO - Run polling for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-25 17:57:14,016 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:57:14,020 - RAG-System - INFO - Local retrieval successful. Sources: {'domixi.txt'}
+2026-04-25 17:57:15,768 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-25 17:57:26,827 - RAG-System - INFO - Ingesting data from ./data...
+2026-04-25 17:57:29,117 - RAG-System - INFO - Ingesting data from ./data...
+2026-04-25 17:57:35,572 - RAG-System - INFO - Clearing all data and index...
+2026-04-25 17:57:40,411 - RAG-System - INFO - Clearing all data and index...
+2026-04-25 17:57:48,956 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:57:48,964 - RAG-System - INFO - Performing web search for: độ mixi là ai
+2026-04-25 17:57:49,286 - primp - INFO - response: https://www.bing.com/search?q=%C4%91%E1%BB%99+mixi+l%C3%A0+ai 200
+2026-04-25 17:58:06,646 - RAG-System - INFO - Received message from Toanfdn: độ mixi là ai
+2026-04-25 17:58:07,865 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-25 17:58:07,867 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:58:07,868 - RAG-System - INFO - Index file deleted from disk. Clearing memory...
+2026-04-25 17:58:07,869 - RAG-System - INFO - Performing web search for: độ mixi là ai
+2026-04-25 17:58:08,121 - primp - INFO - response: https://www.bing.com/search?q=%C4%91%E1%BB%99+mixi+l%C3%A0+ai 200
+2026-04-25 17:58:08,165 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-25 17:58:08,166 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-25 17:58:08,565 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-25 17:58:08,565 - aiogram.event - INFO - Update id=260681572 is handled. Duration 1919 ms by bot id=7753675859
+2026-04-25 17:58:14,756 - RAG-System - INFO - Received message from Toanfdn: .
+2026-04-25 17:58:15,007 - RAG-System - INFO - Received message from Toanfdn: .
+2026-04-25 17:58:15,214 - RAG-System - INFO - Received message from Toanfdn: .
+2026-04-25 17:58:15,421 - RAG-System - INFO - Received message from Toanfdn: ..
+2026-04-25 17:58:15,538 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-25 17:58:15,541 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:58:15,542 - RAG-System - INFO - Performing web search for: .
+2026-04-25 17:58:15,639 - RAG-System - INFO - Received message from Toanfdn: ...
+2026-04-25 17:58:15,729 - primp - INFO - response: https://www.bing.com/search?q=. 200
+2026-04-25 17:58:15,862 - RAG-System - INFO - Received message from Toanfdn: ....
+2026-04-25 17:58:16,240 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-25 17:58:16,243 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:58:16,250 - RAG-System - INFO - Performing web search for: .
+2026-04-25 17:58:16,447 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-25 17:58:16,452 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:58:16,454 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-25 17:58:16,456 - RAG-System - INFO - Performing web search for: .
+2026-04-25 17:58:16,463 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:58:16,487 - RAG-System - INFO - Performing web search for: ...
+2026-04-25 17:58:16,487 - primp - INFO - response: https://www.bing.com/search?q=. 200
+2026-04-25 17:58:16,625 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-25 17:58:16,630 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:58:16,658 - primp - INFO - response: https://www.bing.com/search?q=.&first=11&FORM=PERE 200
+2026-04-25 17:58:16,675 - primp - INFO - response: https://www.bing.com/search?q=. 200
+2026-04-25 17:58:16,682 - primp - INFO - response: https://www.bing.com/search?q=... 200
+2026-04-25 17:58:16,716 - RAG-System - INFO - Performing web search for: ..
+2026-04-25 17:58:16,731 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-25 17:58:16,748 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-25 17:58:16,924 - primp - INFO - response: https://www.bing.com/search?q=.. 200
+2026-04-25 17:58:17,081 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-25 17:58:17,083 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:58:17,085 - RAG-System - INFO - Performing web search for: ....
+2026-04-25 17:58:17,147 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-25 17:58:17,147 - aiogram.event - INFO - Update id=260681575 is handled. Duration 1932 ms by bot id=7753675859
+2026-04-25 17:58:17,160 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-25 17:58:17,162 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-25 17:58:17,272 - primp - INFO - response: https://www.bing.com/search?q=.... 200
+2026-04-25 17:58:17,402 - primp - INFO - response: https://www.bing.com/search?q=.&first=11&FORM=PERE 200
+2026-04-25 17:58:17,565 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-25 17:58:17,565 - aiogram.event - INFO - Update id=260681576 is handled. Duration 2144 ms by bot id=7753675859
+2026-04-25 17:58:17,620 - primp - INFO - response: https://www.bing.com/search?q=...&first=11&FORM=PERE 200
+2026-04-25 17:58:17,655 - primp - INFO - response: https://www.bing.com/search?q=.&first=21&FORM=PERE1 200
+2026-04-25 17:58:18,190 - primp - INFO - response: https://www.bing.com/search?q=....&first=11&FORM=PERE 200
+2026-04-25 17:58:18,349 - primp - INFO - response: https://www.bing.com/search?q=.&first=21&FORM=PERE1 200
+2026-04-25 17:58:18,540 - primp - INFO - response: https://www.bing.com/search?q=.&first=31&FORM=PERE2 200
+2026-04-25 17:58:18,550 - primp - INFO - response: https://www.bing.com/search?q=...&first=21&FORM=PERE1 200
+2026-04-25 17:58:19,138 - primp - INFO - response: https://www.bing.com/search?q=....&first=21&FORM=PERE1 200
+2026-04-25 17:58:19,272 - primp - INFO - response: https://www.bing.com/search?q=.&first=31&FORM=PERE2 200
+2026-04-25 17:58:19,450 - primp - INFO - response: https://www.bing.com/search?q=.&first=41&FORM=PERE3 200
+2026-04-25 17:58:19,481 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-25 17:58:19,481 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-25 17:58:19,490 - primp - INFO - response: https://www.bing.com/search?q=...&first=31&FORM=PERE2 200
+2026-04-25 17:58:19,872 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-25 17:58:19,873 - aiogram.event - INFO - Update id=260681573 is handled. Duration 5116 ms by bot id=7753675859
+2026-04-25 17:58:20,064 - primp - INFO - response: https://www.bing.com/search?q=....&first=31&FORM=PERE2 200
+2026-04-25 17:58:20,190 - primp - INFO - response: https://www.bing.com/search?q=.&first=41&FORM=PERE3 200
+2026-04-25 17:58:20,225 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-25 17:58:20,226 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-25 17:58:20,412 - primp - INFO - response: https://www.bing.com/search?q=...&first=41&FORM=PERE3 200
+2026-04-25 17:58:20,440 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-25 17:58:20,441 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-25 17:58:20,665 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-25 17:58:20,665 - aiogram.event - INFO - Update id=260681574 is handled. Duration 5658 ms by bot id=7753675859
+2026-04-25 17:58:20,919 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-25 17:58:20,920 - aiogram.event - INFO - Update id=260681577 is handled. Duration 5280 ms by bot id=7753675859
+2026-04-25 17:58:21,200 - primp - INFO - response: https://www.bing.com/search?q=....&first=41&FORM=PERE3 200
+2026-04-25 17:58:21,235 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-25 17:58:21,236 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-25 17:58:21,629 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-25 17:58:21,629 - aiogram.event - INFO - Update id=260681578 is handled. Duration 5767 ms by bot id=7753675859
+2026-04-25 17:58:57,981 - aiogram.dispatcher - INFO - Polling stopped
+2026-04-25 17:58:57,983 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-04-25 17:58:57,984 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7753675859)
+2026-04-25 17:58:58,242 - aiogram.dispatcher - INFO - Polling stopped for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-25 17:59:10,905 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:59:14,952 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:59:15,612 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:59:16,073 - RAG-System - INFO - Telegram Bot is starting...
+2026-04-25 17:59:16,073 - aiogram.dispatcher - INFO - Start polling
+2026-04-25 17:59:16,726 - aiogram.dispatcher - INFO - Run polling for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'
+2026-04-25 17:59:20,890 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:59:20,895 - RAG-System - INFO - Performing web search for: độ mixi là ai
+2026-04-25 17:59:21,237 - primp - INFO - response: https://www.bing.com/search?q=%C4%91%E1%BB%99+mixi+l%C3%A0+ai 200
+2026-04-25 17:59:27,151 - RAG-System - INFO - Received message from Toanfdn: độ mixi là ai
+2026-04-25 17:59:28,335 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-25 17:59:28,336 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 17:59:28,338 - RAG-System - INFO - Performing web search for: độ mixi là ai
+2026-04-25 17:59:28,573 - primp - INFO - response: https://www.bing.com/search?q=%C4%91%E1%BB%99+mixi+l%C3%A0+ai 200
+2026-04-25 17:59:28,654 - RAG-System - INFO - Using web search results.
+2026-04-25 17:59:30,230 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-25 17:59:31,569 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-25 17:59:31,569 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-25 17:59:31,977 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-25 17:59:31,978 - aiogram.event - INFO - Update id=260681579 is handled. Duration 4826 ms by bot id=7753675859
+2026-04-25 18:00:26,643 - RAG-System - INFO - Ingesting data from ./data...
+2026-04-25 18:00:28,126 - RAG-System - INFO - Ingesting data from ./data...
+2026-04-25 18:00:36,107 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 18:00:36,112 - RAG-System - INFO - Local retrieval successful. Sources: {'domixi.txt'}
+2026-04-25 18:00:37,657 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-25 18:01:01,554 - RAG-System - INFO - Received message from Toanfdn: độ mixi quê ở đâu
+2026-04-25 18:01:02,325 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-25 18:01:02,328 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 18:01:02,328 - RAG-System - INFO - Index file changed on disk. Reloading...
+2026-04-25 18:01:02,328 - RAG-System - INFO - Loading existing index...
+2026-04-25 18:01:02,357 - RAG-System - INFO - Local retrieval successful. Sources: {'domixi.txt'}
+2026-04-25 18:01:03,014 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-25 18:01:04,212 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-25 18:01:04,212 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-25 18:01:04,616 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-25 18:01:04,617 - aiogram.event - INFO - Update id=260681580 is handled. Duration 3063 ms by bot id=7753675859
+2026-04-25 18:01:16,702 - RAG-System - INFO - Received message from Toanfdn: hay
+2026-04-25 18:01:17,478 - RAG-System - INFO - Submitting query to RAG engine for session tg_7317924541...
+2026-04-25 18:01:17,480 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 14
+2026-04-25 18:01:17,482 - RAG-System - INFO - Performing web search for: hay
+2026-04-25 18:01:17,669 - primp - INFO - response: https://www.bing.com/search?q=hay 200
+2026-04-25 18:01:18,117 - RAG-System - INFO - Received answer from RAG engine.
+2026-04-25 18:01:18,117 - RAG-System - INFO - Editing pending message on Telegram...
+2026-04-25 18:01:18,504 - RAG-System - INFO - Sent response to Toanfdn
+2026-04-25 18:01:18,504 - aiogram.event - INFO - Update id=260681581 is handled. Duration 1802 ms by bot id=7753675859
+2026-04-25 18:02:09,774 - aiogram.dispatcher - INFO - Polling stopped
+2026-04-25 18:02:09,777 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-04-25 18:02:09,778 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7753675859)
+2026-04-25 18:02:10,040 - aiogram.dispatcher - INFO - Polling stopped for bot @qltc_toandn_bot id=7753675859 - 'toandn RAG bot'

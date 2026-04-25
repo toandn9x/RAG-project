@@ -18,7 +18,15 @@ dp = Dispatcher()
 @dp.message(Command("start"))
 async def send_welcome(message: types.Message):
     logger.info(f"User {message.from_user.username} started the bot.")
-    await message.reply("Xin chào! Tôi là chatbot RAG của bạn. Hãy gửi câu hỏi về tài liệu trong dự án, tôi sẽ trả lời dựa trên dữ liệu đó.")
+    await message.reply("Xin chào! Tôi là chatbot RAG của bạn. Hãy gửi câu hỏi về tài liệu trong dự án, tôi sẽ trả lời dựa trên dữ liệu đó.\n\nSử dụng lệnh /clear để xóa lịch sử trò chuyện của bạn.")
+
+@dp.message(Command("clear"))
+async def clear_chat(message: types.Message):
+    from src.core.database import db
+    session_id = f"tg_{message.chat.id}"
+    db.clear_history(session_id)
+    logger.info(f"Cleared history for session {session_id}")
+    await message.reply("🧹 Đã xóa sạch lịch sử trò chuyện của bạn.")
 
 @dp.message()
 async def handle_message(message: types.Message):
